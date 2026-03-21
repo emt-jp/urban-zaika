@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Zaika - Authentic Halal Indian & Pakistani Cuisine in Tokyo</title>
+  <meta name="description" content="Urban Zaika serves authentic halal Indian and Pakistani cuisine in Kamiisshiki, Edogawa City, Tokyo. Experience traditional flavors with 100% halal certified ingredients.">
+  <meta name="keywords" content="halal restaurant Tokyo, Indian food Tokyo, Pakistani food Tokyo, halal biryani, Edogawa restaurant, Urban Zaika, Kamiisshiki">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Urban Zaika - Authentic Halal Indian & Pakistani Cuisine in Tokyo">
+  <meta property="og:description" content="Experience authentic halal Indian & Pakistani cuisine in the heart of Tokyo. 100% Halal Certified.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Urban Zaika">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Urban Zaika",
+    "description": "Authentic Halal Indian & Pakistani Cuisine in Tokyo",
+    "url": "https://urbanzaika.com",
+    "telephone": "+81-3-6808-8378",
+    "email": "Foodhubkoiwa@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Chome-8-21 Kamiisshiki",
+      "addressLocality": "Edogawa City",
+      "addressRegion": "Tokyo",
+      "postalCode": "133-0041",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.7229072",
+      "longitude": "139.8737767"
+    },
+    "servesCuisine": ["Indian", "Pakistani", "Halal"],
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ],
+    "image": "images/butter-chicken.jpg",
+    "menu": "#menu",
+    "acceptsReservations": "True"
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">&#9775;</span>
+        <span class="logo-text">Urban Zaika</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#specialties" class="nav-link">Specialties</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#location" class="nav-link">Location</a></li>
+        <li><a href="#location" class="nav-link nav-cta">Reserve</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-pattern"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-welcome">&#12356;&#12425;&#12387;&#12375;&#12419;&#12356;&#12414;&#12379;</div>
+      <h1 class="hero-title">Urban Zaika</h1>
+      <div class="hero-divider">
+        <span class="divider-ornament">&#10022;</span>
+        <span class="divider-line"></span>
+        <span class="divider-ornament">&#10022;</span>
+      </div>
+      <p class="hero-tagline">Authentic Halal Indian & Pakistani Cuisine in Tokyo</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">View Menu</a>
+        <a href="https://wa.me/810368088378?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg class="wa-icon-inline" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Order
+        </a>
+        <a href="#location" class="btn btn-secondary">Reserve a Table</a>
+      </div>
+      <div class="halal-badge-hero">
+        <div class="halal-badge">
+          <span class="halal-icon">&#9774;</span>
+          <span class="halal-text">100% Halal<br>Certified</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-subtitle">Our Story</span>
+        <h2 class="section-title">A Tradition of Flavor</h2>
+        <div class="title-ornament">&#10053;</div>
+      </div>
+      <div class="about-content fade-in">
+        <p class="about-text">
+          At Urban Zaika, we bring the rich culinary heritage of India and Pakistan to the vibrant streets of Tokyo.
+          Our chefs craft each dish using time-honored family recipes passed down through generations,
+          ensuring every bite is an authentic journey of flavor. We are proudly 100% halal certified,
+          using only the finest ingredients sourced with care and prepared with devotion.
+        </p>
+        <p class="about-text">
+          From the aromatic biryanis of Hyderabad to the robust karahis of Lahore,
+          our menu celebrates the diverse and extraordinary cuisines of the subcontinent &mdash;
+          all in the heart of Tokyo.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#9770;</div>
+          <h3 class="feature-title">100% Halal</h3>
+          <p class="feature-desc">All ingredients are halal certified, prepared according to Islamic dietary guidelines.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#9733;</div>
+          <h3 class="feature-title">Authentic Recipes</h3>
+          <p class="feature-desc">Traditional recipes from India and Pakistan, crafted with generations of culinary wisdom.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#9752;</div>
+          <h3 class="feature-title">Fresh Ingredients</h3>
+          <p class="feature-desc">Premium spices and the freshest produce, hand-selected daily for quality and flavor.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#10084;</div>
+          <h3 class="feature-title">Family Recipes</h3>
+          <p class="feature-desc">Dishes lovingly prepared from recipes passed down through generations of master cooks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-subtitle">Our Menu</span>
+        <h2 class="section-title">Explore Our Dishes</h2>
+        <div class="title-ornament">&#10053;</div>
+        <p class="section-desc">Each dish is prepared fresh to order with authentic spices and halal ingredients</p>
+      </div>
+
+      <!-- Menu Category Filters -->
+      <div class="menu-filters fade-in" id="menuFilters">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="curry">Curry</button>
+        <button class="filter-tab" data-filter="tandoori">Tandoori</button>
+        <button class="filter-tab" data-filter="snacks">Snacks</button>
+        <button class="filter-tab" data-filter="pizza">Pizza</button>
+        <button class="filter-tab" data-filter="breads">Breads</button>
+        <button class="filter-tab" data-filter="burgers">Burgers</button>
+        <button class="filter-tab" data-filter="drinks">Drinks</button>
+        <button class="filter-tab" data-filter="desserts">Desserts</button>
+      </div>
+
+      <div class="menu-grid">
+
+        <!-- Curry -->
+        <div class="menu-card fade-in" data-category="curry">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127834;</span>
+            <h3 class="menu-card-title">Curry</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Chicken Curry</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;800</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mutton Curry</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;900</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Fish Curry</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;850</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Prawn Curry</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;900</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Vegetable Curry</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;750</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chicken Saag</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;850</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mutton Saag</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;950</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Aloo Palak</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;650</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chicken Tikka Curry</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Curry Sets (with Naan/Rice) -->
+        <div class="menu-card fade-in" data-category="curry">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127858;</span>
+            <h3 class="menu-card-title">Curry Sets <span class="item-note">(with Naan/Rice)</span></h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Chicken Curry Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;980</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Fish Curry Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,250</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mutton Curry Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,350</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Vegetable Curry Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;950</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mutton Saag Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,350</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Prawn Curry Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,350</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chana Daal Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;650</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chicken Saag Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,000</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Aloo Palak Set</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tandoori & Kebabs -->
+        <div class="menu-card fade-in" data-category="tandoori">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#128293;</span>
+            <h3 class="menu-card-title">Tandoori & Kebabs</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Chicken Tikka</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,000</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Tandoori Chicken</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,100</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Malai Tikka</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;950</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chicken Seekh Kebab <span class="item-note">(2pc)</span></span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;700</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mutton Seekh Kebab <span class="item-note">(2pc)</span></span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;800</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chicken Boti <span class="item-note">(4pc)</span></span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fried Snacks & Tacos -->
+        <div class="menu-card fade-in" data-category="snacks">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127869;</span>
+            <h3 class="menu-card-title">Fried Snacks & Tacos</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Chicken Fried <span class="item-note">(5pc)</span></span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;750</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Fish Fried <span class="item-note">(3pc)</span></span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;750</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Potato Fries</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Tacos Chicken</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;750</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Tacos Beef</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;850</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chicken Roll</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Beef Roll</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;850</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Breads -->
+        <div class="menu-card fade-in" data-category="breads">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127838;</span>
+            <h3 class="menu-card-title">Breads</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Paratha</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Alu Paratha</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;700</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Butter Naan</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;330</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Plain Naan</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;330</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Garlic Naan</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;450</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Cheese Naan</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;550</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Chapati</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;250</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pizza -->
+        <div class="menu-card fade-in" data-category="pizza">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127829;</span>
+            <h3 class="menu-card-title">Pizza <span class="item-note">(M Size)</span></h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Chicken Chilli Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;800</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Tomato Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;800</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Onion Capsicum Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;900</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Beef Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,300</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Corn Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;800</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Vegetable Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;900</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Beef Chilli Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,300</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Capsicum Tomato Olive Pizza</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;1,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Burgers -->
+        <div class="menu-card fade-in" data-category="burgers">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127828;</span>
+            <h3 class="menu-card-title">Burgers</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Shami Burger</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;400</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Crispy Chicken Burger</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;650</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Beef Burger</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;750</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Crispy Fish Burger</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;650</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Drinks -->
+        <div class="menu-card fade-in" data-category="drinks">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127861;</span>
+            <h3 class="menu-card-title">Drinks</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Banana Milkshake</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Avocado Milkshake</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;550</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mango Milkshake</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Strawberry Milkshake</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Avocado Banana Mix Shake</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;550</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mango Lassi</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;500</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Lassi</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;450</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Ice Tea</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;300</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Milk Tea</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;250</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Coke</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;200</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Black Coffee</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;250</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Zero Alcohol Beer</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;300</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Orange Juice</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;350</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Apple Juice</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;350</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-card fade-in" data-category="desserts">
+          <div class="menu-card-header">
+            <span class="menu-card-icon">&#127846;</span>
+            <h3 class="menu-card-title">Desserts & Salad</h3>
+          </div>
+          <ul class="menu-items">
+            <li class="menu-item">
+              <span class="item-name">Kheer</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;350</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Vanilla / Chocolate Ice Cream <span class="item-note">(2 scoops)</span></span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;300</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mint Chatni Salad</span>
+              <span class="item-dots"></span>
+              <span class="item-price">&yen;200</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialties Section -->
+  <section class="specialties" id="specialties">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-subtitle">Chef's Selection</span>
+        <h2 class="section-title">Our Specialties</h2>
+        <div class="title-ornament">&#10053;</div>
+      </div>
+
+      <div class="specialties-grid">
+        <div class="specialty-card fade-in" style="background-image: url('images/butter-chicken.jpg');">
+          <div class="specialty-card-overlay"></div>
+          <div class="specialty-card-content">
+            <div class="specialty-badge">&#9733; Signature</div>
+            <h3 class="specialty-title">Hyderabadi Biryani</h3>
+            <p class="specialty-desc">
+              Our crown jewel &mdash; fragrant basmati rice layered with tender marinated meat,
+              slow-cooked in a sealed pot with saffron, fried onions, and a secret blend of
+              over 20 aromatic spices.
+            </p>
+            <span class="specialty-price">From &yen;1,200</span>
+          </div>
+        </div>
+
+        <div class="specialty-card fade-in" style="background-image: url('images/curry-bowl.jpg');">
+          <div class="specialty-card-overlay"></div>
+          <div class="specialty-card-content">
+            <div class="specialty-badge">&#128293; Slow-Cooked</div>
+            <h3 class="specialty-title">Mutton Nihari</h3>
+            <p class="specialty-desc">
+              A legendary Pakistani delicacy &mdash; premium mutton simmered overnight for 8 hours
+              in a rich, deeply spiced stew. Garnished with fresh ginger, green chilies,
+              and a squeeze of lemon.
+            </p>
+            <span class="specialty-price">&yen;1,400</span>
+          </div>
+        </div>
+
+        <div class="specialty-card fade-in" style="background-image: url('images/karahi.jpg');">
+          <div class="specialty-card-overlay"></div>
+          <div class="specialty-card-content">
+            <div class="specialty-badge">&#127798; Wok-Fired</div>
+            <h3 class="specialty-title">Chicken Karahi</h3>
+            <p class="specialty-desc">
+              A Lahori street-food classic elevated to art &mdash; succulent chicken pieces
+              tossed in a traditional wok with fresh tomatoes, green chilies, ginger, and
+              a bold mix of whole spices.
+            </p>
+            <span class="specialty-price">&yen;1,200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-subtitle">Our Kitchen</span>
+        <h2 class="section-title">Food Gallery</h2>
+        <div class="title-ornament">&#10053;</div>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item-large fade-in">
+          <img src="images/butter-chicken.jpg" alt="Butter chicken served in traditional bowl" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Butter Chicken</div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/karahi.jpg" alt="Chicken karahi cooked in traditional wok" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Chicken Karahi</div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/curry-bowl.jpg" alt="Rich curry bowl with aromatic spices" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Signature Curry</div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/chana.jpg" alt="Chana masala with chickpeas and spices" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Chana Masala</div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/aloo-matar.jpg" alt="Aloo matar with potatoes and green peas" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Aloo Matar</div>
+        </div>
+        <div class="gallery-item gallery-item-large fade-in">
+          <img src="images/chicken-curry-promo.jpg" alt="Chicken curry special promotion" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Chef's Special</div>
+        </div>
+        <div class="gallery-item fade-in">
+          <img src="images/fries.jpg" alt="Crispy golden fries served fresh" loading="lazy" width="800" height="600">
+          <div class="gallery-caption">Crispy Fries</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-subtitle">What Our Guests Say</span>
+        <h2 class="section-title">Reviews</h2>
+        <div class="title-ornament">&#10053;</div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="testimonial-quote">
+            &ldquo;The biryani here is the best I've had outside of Hyderabad. The flavors are
+            incredibly authentic and the service is warm and welcoming. My whole family loves it.
+            We come every weekend now!&rdquo;
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div class="author-info">
+              <span class="author-name">Tanaka Yusuke</span>
+              <span class="author-detail">Regular Guest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="testimonial-quote">
+            &ldquo;Finally, truly halal food in Tokyo that doesn't compromise on taste!
+            The mutton nihari melts in your mouth. The atmosphere is beautiful and the staff
+            are so friendly. A hidden gem in Edogawa.&rdquo;
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <span class="author-name">Suzuki Amina</span>
+              <span class="author-detail">Food Blogger</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote class="testimonial-quote">
+            &ldquo;I brought my colleagues from Pakistan here and they were amazed
+            by the authentic taste. The karahi tastes exactly like home.
+            Great portion sizes and very reasonable prices for Tokyo. Highly recommended!&rdquo;
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">K</div>
+            <div class="author-info">
+              <span class="author-name">Kobayashi Hiroshi</span>
+              <span class="author-detail">IT Professional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Section -->
+  <section class="location" id="location">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-subtitle">Find Us</span>
+        <h2 class="section-title">Location & Hours</h2>
+        <div class="title-ornament">&#10053;</div>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-info fade-in">
+          <div class="info-block">
+            <h3 class="info-title">&#128205; Address</h3>
+            <p class="info-text">1 Chome-8-21 Kamiisshiki<br>Edogawa City, Tokyo 133-0041</p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="info-title">&#9742; Contact</h3>
+            <p class="info-text">
+              <a href="tel:03-6808-8378" class="info-link">03-6808-8378</a><br>
+              <a href="mailto:Foodhubkoiwa@gmail.com" class="info-link">Foodhubkoiwa@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="info-block">
+            <h3 class="info-title">&#128338; Opening Hours</h3>
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <td class="hours-label">Monday - Friday</td>
+                  <td class="hours-value">11:00 - 22:00</td>
+                </tr>
+                <tr>
+                  <td class="hours-label">Saturday</td>
+                  <td class="hours-value">11:00 - 22:00</td>
+                </tr>
+                <tr>
+                  <td class="hours-label">Sunday</td>
+                  <td class="hours-value">11:00 - 22:00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="info-block">
+            <div class="halal-badge-location">
+              <span class="halal-icon">&#9774;</span>
+              <span class="halal-text-sm">100% Halal Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-map fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5!2d139.8737767!3d35.7229072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601887d537d260e1%3A0x32e7eb815ce1d0cf!2sUrban%20Zaika%20(Halal%20Resturant)!5e0!3m2!1sen!2sjp"
+            width="100%"
+            height="450"
+            style="border:0; border-radius: 12px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Urban Zaika Location Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-pattern"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3 class="footer-logo">
+            <span class="logo-icon">&#9775;</span> Urban Zaika
+          </h3>
+          <p class="footer-tagline">Authentic Halal Indian & Pakistani Cuisine in Tokyo</p>
+          <p class="footer-contact-info">
+            <a href="mailto:Foodhubkoiwa@gmail.com" class="footer-email">Foodhubkoiwa@gmail.com</a>
+          </p>
+          <div class="footer-halal">
+            <span class="halal-icon">&#9774;</span>
+            <span>100% Halal Certified</span>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specialties">Specialties</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4 class="footer-heading">Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">&#9679; Instagram</a>
+            <a href="#" class="social-link" aria-label="Facebook">&#9679; Facebook</a>
+            <a href="#" class="social-link" aria-label="Twitter">&#9679; X / Twitter</a>
+            <a href="#" class="social-link" aria-label="Google Maps">&#9679; Google Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Urban Zaika. All rights reserved.</p>
+        <p class="footer-japanese">&#26481;&#20140;&#12398;&#26412;&#26684;&#12495;&#12521;&#12540;&#12523;&#26009;&#29702;</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/810368088378?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Order via WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Mobile CTA Bar -->
+  <div class="mobile-cta-bar" id="mobileCta">
+    <a href="tel:03-6808-8378" class="cta-btn cta-call">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+      Call Now
+    </a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=Urban+Zaika+Halal+Restaurant+Edogawa+Tokyo" class="cta-btn cta-directions" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.71 11.29l-9-9a.996.996 0 00-1.41 0l-9 9a.996.996 0 000 1.41l9 9c.39.39 1.02.39 1.41 0l9-9a.996.996 0 000-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+      Directions
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
