@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFYZQ5NKZN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFYZQ5NKZN');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Zaika - Authentic Halal Indian & Pakistani Cuisine in Tokyo</title>
-  <meta name="description" content="Urban Zaika serves authentic halal Indian and Pakistani cuisine in Kamiisshiki, Edogawa City, Tokyo. Experience traditional flavors with 100% halal certified ingredients.">
-  <meta name="keywords" content="halal restaurant Tokyo, Indian food Tokyo, Pakistani food Tokyo, halal biryani, Edogawa restaurant, Urban Zaika, Kamiisshiki">
+  <title>Urban Zaika｜ハラルインド・パキスタン料理｜東京都江戸川区</title>
+  <meta name="description" content="東京都江戸川区上一色のハラル認証レストラン Urban Zaika。本格的なインド・パキスタン料理をご提供。ビリヤニ、バターチキン、カラヒなど豊富なメニュー。ランチ・ディナー毎日営業。Authentic halal Indian & Pakistani cuisine in Edogawa, Tokyo.">
+  <meta name="keywords" content="ハラルレストラン 東京, ハラル インド料理, パキスタン料理 東京, ハラル ビリヤニ, 江戸川区 レストラン, 上一色 カレー, インドカレー 東京, ハラル認証, Urban Zaika, halal restaurant Tokyo, Indian food Tokyo, Pakistani food Edogawa">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://urban-zaika.com/">
+  <link rel="alternate" hreflang="ja" href="https://urban-zaika.com/">
+  <link rel="alternate" hreflang="ur" href="https://urban-zaika.com/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Urban Zaika - Authentic Halal Indian & Pakistani Cuisine in Tokyo">
-  <meta property="og:description" content="Experience authentic halal Indian & Pakistani cuisine in the heart of Tokyo. 100% Halal Certified.">
+  <meta property="og:title" content="Urban Zaika｜ハラルインド・パキスタン料理｜東京都江戸川区">
+  <meta property="og:description" content="東京都江戸川区の本格ハラル認証インド・パキスタン料理レストラン。ビリヤニ、バターチキン、カラヒなど。毎日11時〜22時営業。">
   <meta property="og:type" content="restaurant">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Urban Zaika">
 
   <!-- Structured Data (JSON-LD) -->
@@ -19,16 +34,17 @@
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
-    "name": "Urban Zaika",
-    "description": "Authentic Halal Indian & Pakistani Cuisine in Tokyo",
-    "url": "https://urbanzaika.com",
+    "name": "Urban Zaika（アーバンザイカ）",
+    "alternateName": "アーバンザイカ",
+    "description": "東京都江戸川区上一色のハラル認証インド・パキスタン料理レストラン。Authentic Halal Indian & Pakistani Cuisine in Tokyo.",
+    "url": "https://urban-zaika.com",
     "telephone": "+81-3-6808-8378",
     "email": "info@urban-zaika.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1 Chome-8-21 Kamiisshiki",
-      "addressLocality": "Edogawa City",
-      "addressRegion": "Tokyo",
+      "streetAddress": "上一色1丁目8-21",
+      "addressLocality": "江戸川区",
+      "addressRegion": "東京都",
       "postalCode": "133-0041",
       "addressCountry": "JP"
     },
@@ -37,7 +53,7 @@
       "latitude": "35.7229072",
       "longitude": "139.8737767"
     },
-    "servesCuisine": ["Indian", "Pakistani", "Halal"],
+    "servesCuisine": ["インド料理", "パキスタン料理", "ハラル", "Indian", "Pakistani", "Halal"],
     "priceRange": "$$",
     "openingHoursSpecification": [
       {
@@ -57,6 +73,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -69,17 +86,29 @@
         <span class="logo-icon">&#9775;</span>
         <span class="logo-text">Urban Zaika</span>
       </a>
+      <div class="lang-dropdown" id="langDropdown">
+        <button class="lang-dropdown-btn" id="langDropdownBtn" aria-label="Select language" aria-expanded="false">
+          <svg class="lang-globe-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-current" id="langCurrent">日本語</span>
+          <svg class="lang-chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <ul class="lang-menu" id="langMenu">
+          <li class="lang-option" data-lang="en"><span class="lang-flag">EN</span> English</li>
+          <li class="lang-option active" data-lang="ja"><span class="lang-flag">JP</span> 日本語</li>
+          <li class="lang-option" data-lang="ur"><span class="lang-flag">UR</span> اردو</li>
+        </ul>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
         <span class="hamburger"></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#menu" class="nav-link">Menu</a></li>
-        <li><a href="#specialties" class="nav-link">Specialties</a></li>
-        <li><a href="#gallery" class="nav-link">Gallery</a></li>
-        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-        <li><a href="#location" class="nav-link">Location</a></li>
-        <li><a href="#location" class="nav-link nav-cta">Reserve</a></li>
+        <li><a href="#about" class="nav-link"><span data-en="About" data-ja="お店について" data-ur="ہمارے بارے میں">お店について</span></a></li>
+        <li><a href="#menu" class="nav-link"><span data-en="Menu" data-ja="メニュー" data-ur="مینو">メニュー</span></a></li>
+        <li><a href="#specialties" class="nav-link"><span data-en="Specialties" data-ja="おすすめ" data-ur="خصوصیات">おすすめ</span></a></li>
+        <li><a href="#gallery" class="nav-link"><span data-en="Gallery" data-ja="ギャラリー" data-ur="گیلری">ギャラリー</span></a></li>
+        <li><a href="#testimonials" class="nav-link"><span data-en="Reviews" data-ja="口コミ" data-ur="جائزے">口コミ</span></a></li>
+        <li><a href="#location" class="nav-link"><span data-en="Location" data-ja="アクセス" data-ur="مقام">アクセス</span></a></li>
+        <li><a href="#location" class="nav-link nav-cta"><span data-en="Reserve" data-ja="ご予約" data-ur="بکنگ">ご予約</span></a></li>
       </ul>
     </div>
   </nav>
@@ -89,26 +118,26 @@
     <div class="hero-pattern"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-welcome">&#12356;&#12425;&#12387;&#12375;&#12419;&#12356;&#12414;&#12379;</div>
+      <div class="hero-welcome"><span data-en="Welcome" data-ja="いらっしゃいませ" data-ur="خوش آمدید">いらっしゃいませ</span></div>
       <h1 class="hero-title">Urban Zaika</h1>
       <div class="hero-divider">
         <span class="divider-ornament">&#10022;</span>
         <span class="divider-line"></span>
         <span class="divider-ornament">&#10022;</span>
       </div>
-      <p class="hero-tagline">Authentic Halal Indian & Pakistani Cuisine in Tokyo</p>
+      <p class="hero-tagline"><span data-en="Authentic Halal Indian & Pakistani Cuisine in Tokyo" data-ja="東京の本格ハラール インド・パキスタン料理" data-ur="ٹوکیو میں مستند حلال ہندوستانی اور پاکستانی کھانے">東京の本格ハラール インド・パキスタン料理</span></p>
       <div class="hero-buttons">
-        <a href="#menu" class="btn btn-primary">View Menu</a>
-        <a href="https://wa.me/810368088378?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <a href="#menu" class="btn btn-primary"><span data-en="View Menu" data-ja="メニューを見る" data-ur="مینو دیکھیں">メニューを見る</span></a>
+        <a href="https://wa.me/819066582838?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="btn btn-whatsapp" target="_blank" rel="noopener">
           <svg class="wa-icon-inline" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          WhatsApp Order
+          <span data-en="WhatsApp Order" data-ja="WhatsAppで注文" data-ur="واٹس ایپ آرڈر">WhatsAppで注文</span>
         </a>
-        <a href="#location" class="btn btn-secondary">Reserve a Table</a>
+        <a href="#location" class="btn btn-secondary"><span data-en="Reserve a Table" data-ja="席を予約する" data-ur="ٹیبل بک کریں">席を予約する</span></a>
       </div>
       <div class="halal-badge-hero">
         <div class="halal-badge">
           <span class="halal-icon">&#9774;</span>
-          <span class="halal-text">100% Halal<br>Certified</span>
+          <span class="halal-text"><span data-en="100% Halal&#10;Certified" data-ja="100% ハラール&#10;認証" data-ur="100% حلال تصدیق شدہ">100% ハラール<br>認証</span></span>
         </div>
       </div>
     </div>
@@ -118,43 +147,38 @@
   <section class="about" id="about">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-subtitle">Our Story</span>
-        <h2 class="section-title">A Tradition of Flavor</h2>
+        <span class="section-subtitle"><span data-en="Our Story" data-ja="私たちの物語" data-ur="ہماری کہانی">私たちの物語</span></span>
+        <h2 class="section-title"><span data-en="A Tradition of Flavor" data-ja="伝統の味わい" data-ur="ذائقے کی روایت">伝統の味わい</span></h2>
         <div class="title-ornament">&#10053;</div>
       </div>
       <div class="about-content fade-in">
         <p class="about-text">
-          At Urban Zaika, we bring the rich culinary heritage of India and Pakistan to the vibrant streets of Tokyo.
-          Our chefs craft each dish using time-honored family recipes passed down through generations,
-          ensuring every bite is an authentic journey of flavor. We are proudly 100% halal certified,
-          using only the finest ingredients sourced with care and prepared with devotion.
+          <span data-en="At Urban Zaika, we bring the rich culinary heritage of India and Pakistan to the vibrant streets of Tokyo. Our chefs craft each dish using time-honored family recipes passed down through generations, ensuring every bite is an authentic journey of flavor. We are proudly 100% halal certified, using only the finest ingredients sourced with care and prepared with devotion." data-ja="Urban Zaikaでは、インドとパキスタンの豊かな食文化を東京の活気ある街にお届けしています。シェフたちは、代々受け継がれてきた家族のレシピを使い、一品一品丁寧に仕上げ、一口ごとに本物の味わいをお届けします。100%ハラール認証を誇りに、厳選された最高の食材を心を込めて調理しています。" data-ur="اربن ذائقہ میں، ہم ہندوستان اور پاکستان کی بھرپور کھانے کی وراثت کو ٹوکیو کی جاندار گلیوں میں لاتے ہیں۔ ہمارے شیف نسلوں سے چلے آنے والے خاندانی نسخوں کا استعمال کرتے ہوئے ہر پکوان تیار کرتے ہیں، اس بات کو یقینی بناتے ہوئے کہ ہر لقمہ ذائقے کا ایک مستند سفر ہے۔ ہمیں فخر ہے کہ ہم 100% حلال تصدیق شدہ ہیں، صرف بہترین اجزاء کا استعمال کرتے ہیں جو احتیاط سے حاصل کیے جاتے ہیں اور عقیدت سے تیار کیے جاتے ہیں۔">Urban Zaikaでは、インドとパキスタンの豊かな食文化を東京の活気ある街にお届けしています。シェフたちは、代々受け継がれてきた家族のレシピを使い、一品一品丁寧に仕上げ、一口ごとに本物の味わいをお届けします。100%ハラール認証を誇りに、厳選された最高の食材を心を込めて調理しています。</span>
         </p>
         <p class="about-text">
-          From the aromatic biryanis of Hyderabad to the robust karahis of Lahore,
-          our menu celebrates the diverse and extraordinary cuisines of the subcontinent &mdash;
-          all in the heart of Tokyo.
+          <span data-en="From the aromatic biryanis of Hyderabad to the robust karahis of Lahore, our menu celebrates the diverse and extraordinary cuisines of the subcontinent &mdash; all in the heart of Tokyo." data-ja="ハイデラバードの香り高いビリヤニからラホールの力強いカラヒまで、当店のメニューは南アジアの多彩で素晴らしい料理を東京の中心でお届けします。" data-ur="حیدرآباد کی خوشبودار بریانی سے لے کر لاہور کی مضبوط کڑاہی تک، ہمارا مینو برصغیر کے متنوع اور غیر معمولی کھانوں کا جشن مناتا ہے — سب ٹوکیو کے دل میں۔">ハイデラバードの香り高いビリヤニからラホールの力強いカラヒまで、当店のメニューは南アジアの多彩で素晴らしい料理を東京の中心でお届けします。</span>
         </p>
       </div>
       <div class="features-grid">
         <div class="feature-card fade-in">
           <div class="feature-icon">&#9770;</div>
-          <h3 class="feature-title">100% Halal</h3>
-          <p class="feature-desc">All ingredients are halal certified, prepared according to Islamic dietary guidelines.</p>
+          <h3 class="feature-title"><span data-en="100% Halal" data-ja="100% ハラール" data-ur="100% حلال">100% ハラール</span></h3>
+          <p class="feature-desc"><span data-en="All ingredients are halal certified, prepared according to Islamic dietary guidelines." data-ja="すべての食材はハラール認証済み。イスラムの食事規定に従って調理しています。" data-ur="تمام اجزاء حلال تصدیق شدہ ہیں، اسلامی غذائی ہدایات کے مطابق تیار کیے جاتے ہیں۔">すべての食材はハラール認証済み。イスラムの食事規定に従って調理しています。</span></p>
         </div>
         <div class="feature-card fade-in">
           <div class="feature-icon">&#9733;</div>
-          <h3 class="feature-title">Authentic Recipes</h3>
-          <p class="feature-desc">Traditional recipes from India and Pakistan, crafted with generations of culinary wisdom.</p>
+          <h3 class="feature-title"><span data-en="Authentic Recipes" data-ja="本格レシピ" data-ur="مستند نسخے">本格レシピ</span></h3>
+          <p class="feature-desc"><span data-en="Traditional recipes from India and Pakistan, crafted with generations of culinary wisdom." data-ja="インドとパキスタンの伝統的なレシピを、世代を超えた料理の知恵で仕上げています。" data-ur="ہندوستان اور پاکستان کے روایتی نسخے، نسلوں کی پاکیزہ حکمت سے تیار کیے گئے۔">インドとパキスタンの伝統的なレシピを、世代を超えた料理の知恵で仕上げています。</span></p>
         </div>
         <div class="feature-card fade-in">
           <div class="feature-icon">&#9752;</div>
-          <h3 class="feature-title">Fresh Ingredients</h3>
-          <p class="feature-desc">Premium spices and the freshest produce, hand-selected daily for quality and flavor.</p>
+          <h3 class="feature-title"><span data-en="Fresh Ingredients" data-ja="新鮮な食材" data-ur="تازہ اجزاء">新鮮な食材</span></h3>
+          <p class="feature-desc"><span data-en="Premium spices and the freshest produce, hand-selected daily for quality and flavor." data-ja="厳選されたスパイスと新鮮な食材を毎日手作業で選び、品質と風味を追求しています。" data-ur="عمدہ مصالحے اور تازہ ترین پیداوار، معیار اور ذائقے کے لیے روزانہ ہاتھ سے چنی جاتی ہیں۔">厳選されたスパイスと新鮮な食材を毎日手作業で選び、品質と風味を追求しています。</span></p>
         </div>
         <div class="feature-card fade-in">
           <div class="feature-icon">&#10084;</div>
-          <h3 class="feature-title">Family Recipes</h3>
-          <p class="feature-desc">Dishes lovingly prepared from recipes passed down through generations of master cooks.</p>
+          <h3 class="feature-title"><span data-en="Family Recipes" data-ja="家族のレシピ" data-ur="خاندانی نسخے">家族のレシピ</span></h3>
+          <p class="feature-desc"><span data-en="Dishes lovingly prepared from recipes passed down through generations of master cooks." data-ja="熟練の料理人から代々受け継がれたレシピで、愛情を込めて調理しています。" data-ur="ماہر باورچیوں کی نسلوں سے چلے آنے والے نسخوں سے محبت سے تیار کیے گئے پکوان۔">熟練の料理人から代々受け継がれたレシピで、愛情を込めて調理しています。</span></p>
         </div>
       </div>
     </div>
@@ -164,23 +188,23 @@
   <section class="menu-section" id="menu">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-subtitle">Our Menu</span>
-        <h2 class="section-title">Explore Our Dishes</h2>
+        <span class="section-subtitle"><span data-en="Our Menu" data-ja="メニュー" data-ur="ہمارا مینو">メニュー</span></span>
+        <h2 class="section-title"><span data-en="Explore Our Dishes" data-ja="料理をご覧ください" data-ur="ہمارے پکوان دیکھیں">料理をご覧ください</span></h2>
         <div class="title-ornament">&#10053;</div>
-        <p class="section-desc">Each dish is prepared fresh to order with authentic spices and halal ingredients</p>
+        <p class="section-desc"><span data-en="Each dish is prepared fresh to order with authentic spices and halal ingredients" data-ja="すべての料理は本格スパイスとハラール食材を使い、注文を受けてから調理します" data-ur="ہر پکوان مستند مصالحوں اور حلال اجزاء کے ساتھ تازہ تیار کیا جاتا ہے">すべての料理は本格スパイスとハラール食材を使い、注文を受けてから調理します</span></p>
       </div>
 
       <!-- Menu Category Filters -->
       <div class="menu-filters fade-in" id="menuFilters">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="curry">Curry</button>
-        <button class="filter-tab" data-filter="tandoori">Tandoori</button>
-        <button class="filter-tab" data-filter="snacks">Snacks</button>
-        <button class="filter-tab" data-filter="pizza">Pizza</button>
-        <button class="filter-tab" data-filter="breads">Breads</button>
-        <button class="filter-tab" data-filter="burgers">Burgers</button>
-        <button class="filter-tab" data-filter="drinks">Drinks</button>
-        <button class="filter-tab" data-filter="desserts">Desserts</button>
+        <button class="filter-tab active" data-filter="all"><span data-en="All" data-ja="すべて" data-ur="سب">すべて</span></button>
+        <button class="filter-tab" data-filter="curry"><span data-en="Curry" data-ja="カレー" data-ur="سالن">カレー</span></button>
+        <button class="filter-tab" data-filter="tandoori"><span data-en="Tandoori" data-ja="タンドリー" data-ur="تندوری">タンドリー</span></button>
+        <button class="filter-tab" data-filter="snacks"><span data-en="Snacks" data-ja="スナック" data-ur="ناشتے">スナック</span></button>
+        <button class="filter-tab" data-filter="pizza"><span data-en="Pizza" data-ja="ピザ" data-ur="پیزا">ピザ</span></button>
+        <button class="filter-tab" data-filter="breads"><span data-en="Breads" data-ja="パン" data-ur="روٹیاں">パン</span></button>
+        <button class="filter-tab" data-filter="burgers"><span data-en="Burgers" data-ja="バーガー" data-ur="برگر">バーガー</span></button>
+        <button class="filter-tab" data-filter="drinks"><span data-en="Drinks" data-ja="ドリンク" data-ur="مشروبات">ドリンク</span></button>
+        <button class="filter-tab" data-filter="desserts"><span data-en="Desserts" data-ja="デザート" data-ur="میٹھے">デザート</span></button>
       </div>
 
       <div class="menu-grid">
@@ -189,7 +213,7 @@
         <div class="menu-card fade-in" data-category="curry">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127834;</span>
-            <h3 class="menu-card-title">Curry</h3>
+            <h3 class="menu-card-title"><span data-en="Curry" data-ja="カレー" data-ur="سالن">カレー</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -244,7 +268,7 @@
         <div class="menu-card fade-in" data-category="curry">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127858;</span>
-            <h3 class="menu-card-title">Curry Sets <span class="item-note">(with Naan/Rice)</span></h3>
+            <h3 class="menu-card-title"><span data-en="Curry Sets" data-ja="カレーセット" data-ur="سالن سیٹ">カレーセット</span> <span class="item-note" data-en="(with Naan/Rice)" data-ja="(ナン/ライス付き)" data-ur="(نان/چاول کے ساتھ)">(ナン/ライス付き)</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -299,7 +323,7 @@
         <div class="menu-card fade-in" data-category="tandoori">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#128293;</span>
-            <h3 class="menu-card-title">Tandoori & Kebabs</h3>
+            <h3 class="menu-card-title"><span data-en="Tandoori & Kebabs" data-ja="タンドリー・ケバブ" data-ur="تندوری اور کباب">タンドリー・ケバブ</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -339,7 +363,7 @@
         <div class="menu-card fade-in" data-category="snacks">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127869;</span>
-            <h3 class="menu-card-title">Fried Snacks & Tacos</h3>
+            <h3 class="menu-card-title"><span data-en="Fried Snacks & Tacos" data-ja="揚げ物・タコス" data-ur="تلے ہوئے ناشتے اور ٹیکو">揚げ物・タコス</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -384,7 +408,7 @@
         <div class="menu-card fade-in" data-category="breads">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127838;</span>
-            <h3 class="menu-card-title">Breads</h3>
+            <h3 class="menu-card-title"><span data-en="Breads" data-ja="パン" data-ur="روٹیاں">パン</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -429,7 +453,7 @@
         <div class="menu-card fade-in" data-category="pizza">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127829;</span>
-            <h3 class="menu-card-title">Pizza <span class="item-note">(M Size)</span></h3>
+            <h3 class="menu-card-title"><span data-en="Pizza" data-ja="ピザ" data-ur="پیزا">ピザ</span> <span class="item-note" data-en="(M Size)" data-ja="(Mサイズ)" data-ur="(ایم سائز)">(Mサイズ)</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -479,7 +503,7 @@
         <div class="menu-card fade-in" data-category="burgers">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127828;</span>
-            <h3 class="menu-card-title">Burgers</h3>
+            <h3 class="menu-card-title"><span data-en="Burgers" data-ja="バーガー" data-ur="برگر">バーガー</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -509,7 +533,7 @@
         <div class="menu-card fade-in" data-category="drinks">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127861;</span>
-            <h3 class="menu-card-title">Drinks</h3>
+            <h3 class="menu-card-title"><span data-en="Drinks" data-ja="ドリンク" data-ur="مشروبات">ドリンク</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -589,7 +613,7 @@
         <div class="menu-card fade-in" data-category="desserts">
           <div class="menu-card-header">
             <span class="menu-card-icon">&#127846;</span>
-            <h3 class="menu-card-title">Desserts & Salad</h3>
+            <h3 class="menu-card-title"><span data-en="Desserts & Salad" data-ja="デザート・サラダ" data-ur="میٹھے اور سلاد">デザート・サラダ</span></h3>
           </div>
           <ul class="menu-items">
             <li class="menu-item">
@@ -618,8 +642,8 @@
   <section class="specialties" id="specialties">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-subtitle">Chef's Selection</span>
-        <h2 class="section-title">Our Specialties</h2>
+        <span class="section-subtitle"><span data-en="Chef's Selection" data-ja="シェフのおすすめ" data-ur="شیف کی پسند">シェフのおすすめ</span></span>
+        <h2 class="section-title"><span data-en="Our Specialties" data-ja="スペシャリティ" data-ur="ہماری خصوصیات">スペシャリティ</span></h2>
         <div class="title-ornament">&#10053;</div>
       </div>
 
@@ -627,26 +651,22 @@
         <div class="specialty-card fade-in" style="background-image: url('images/butter-chicken.jpg');">
           <div class="specialty-card-overlay"></div>
           <div class="specialty-card-content">
-            <div class="specialty-badge">&#9733; Signature</div>
+            <div class="specialty-badge">&#9733; <span data-en="Signature" data-ja="看板メニュー" data-ur="خاص">看板メニュー</span></div>
             <h3 class="specialty-title">Hyderabadi Biryani</h3>
             <p class="specialty-desc">
-              Our crown jewel &mdash; fragrant basmati rice layered with tender marinated meat,
-              slow-cooked in a sealed pot with saffron, fried onions, and a secret blend of
-              over 20 aromatic spices.
+              <span data-en="Our crown jewel &mdash; fragrant basmati rice layered with tender marinated meat, slow-cooked in a sealed pot with saffron, fried onions, and a secret blend of over 20 aromatic spices." data-ja="当店の至宝 &mdash; 香り高いバスマティライスに柔らかいマリネ肉を重ね、サフラン、フライドオニオン、20種以上のスパイスを秘伝のブレンドで密封鍋でじっくり炊き上げました。" data-ur="ہمارا شاہی پکوان — خوشبودار باسمتی چاول جو نرم میرینیٹ گوشت کے ساتھ تہہ در تہہ، زعفران، تلے ہوئے پیاز، اور 20 سے زیادہ خوشبودار مصالحوں کے خفیہ امتزاج کے ساتھ بند برتن میں آہستہ پکایا جاتا ہے۔">当店の至宝 &mdash; 香り高いバスマティライスに柔らかいマリネ肉を重ね、サフラン、フライドオニオン、20種以上のスパイスを秘伝のブレンドで密封鍋でじっくり炊き上げました。</span>
             </p>
-            <span class="specialty-price">From &yen;1,200</span>
+            <span class="specialty-price"><span data-en="From" data-ja="から" data-ur="سے">から</span> &yen;1,200</span>
           </div>
         </div>
 
         <div class="specialty-card fade-in" style="background-image: url('images/curry-bowl.jpg');">
           <div class="specialty-card-overlay"></div>
           <div class="specialty-card-content">
-            <div class="specialty-badge">&#128293; Slow-Cooked</div>
+            <div class="specialty-badge">&#128293; <span data-en="Slow-Cooked" data-ja="煮込み" data-ur="آہستہ پکا ہوا">煮込み</span></div>
             <h3 class="specialty-title">Mutton Nihari</h3>
             <p class="specialty-desc">
-              A legendary Pakistani delicacy &mdash; premium mutton simmered overnight for 8 hours
-              in a rich, deeply spiced stew. Garnished with fresh ginger, green chilies,
-              and a squeeze of lemon.
+              <span data-en="A legendary Pakistani delicacy &mdash; premium mutton simmered overnight for 8 hours in a rich, deeply spiced stew. Garnished with fresh ginger, green chilies, and a squeeze of lemon." data-ja="伝説的なパキスタン料理 &mdash; 上質なマトンを濃厚なスパイスシチューで8時間じっくり煮込みました。新鮮な生姜、青唐辛子、レモンを添えて。" data-ur="ایک افسانوی پاکستانی لذت — عمدہ مٹن کو بھرپور، گہرے مصالحے دار شوربے میں 8 گھنٹے تک آہستہ پکایا جاتا ہے۔ تازہ ادرک، ہری مرچ، اور لیموں کے نچوڑ سے سجایا جاتا ہے۔">伝説的なパキスタン料理 &mdash; 上質なマトンを濃厚なスパイスシチューで8時間じっくり煮込みました。新鮮な生姜、青唐辛子、レモンを添えて。</span>
             </p>
             <span class="specialty-price">&yen;1,400</span>
           </div>
@@ -655,12 +675,10 @@
         <div class="specialty-card fade-in" style="background-image: url('images/karahi.jpg');">
           <div class="specialty-card-overlay"></div>
           <div class="specialty-card-content">
-            <div class="specialty-badge">&#127798; Wok-Fired</div>
+            <div class="specialty-badge">&#127798; <span data-en="Wok-Fired" data-ja="鉄鍋焼き" data-ur="کڑاہی میں پکا ہوا">鉄鍋焼き</span></div>
             <h3 class="specialty-title">Chicken Karahi</h3>
             <p class="specialty-desc">
-              A Lahori street-food classic elevated to art &mdash; succulent chicken pieces
-              tossed in a traditional wok with fresh tomatoes, green chilies, ginger, and
-              a bold mix of whole spices.
+              <span data-en="A Lahori street-food classic elevated to art &mdash; succulent chicken pieces tossed in a traditional wok with fresh tomatoes, green chilies, ginger, and a bold mix of whole spices." data-ja="ラホールのストリートフード定番を芸術に昇華 &mdash; ジューシーなチキンを伝統的な鉄鍋でフレッシュトマト、青唐辛子、生姜、ホールスパイスと共に豪快に炒めました。" data-ur="لاہوری اسٹریٹ فوڈ کا کلاسک — رسیلے چکن کے ٹکڑے روایتی کڑاہی میں تازہ ٹماٹر، ہری مرچ، ادرک، اور ثابت مصالحوں کے ساتھ بھونے جاتے ہیں۔">ラホールのストリートフード定番を芸術に昇華 &mdash; ジューシーなチキンを伝統的な鉄鍋でフレッシュトマト、青唐辛子、生姜、ホールスパイスと共に豪快に炒めました。</span>
             </p>
             <span class="specialty-price">&yen;1,200</span>
           </div>
@@ -673,8 +691,8 @@
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-subtitle">Our Kitchen</span>
-        <h2 class="section-title">Food Gallery</h2>
+        <span class="section-subtitle"><span data-en="Our Kitchen" data-ja="お料理" data-ur="ہمارا باورچی خانہ">お料理</span></span>
+        <h2 class="section-title"><span data-en="Food Gallery" data-ja="目で楽しむごちそう" data-ur="کھانے کی گیلری">目で楽しむごちそう</span></h2>
         <div class="title-ornament">&#10053;</div>
       </div>
 
@@ -715,8 +733,8 @@
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-subtitle">What Our Guests Say</span>
-        <h2 class="section-title">Reviews</h2>
+        <span class="section-subtitle"><span data-en="What Our Guests Say" data-ja="お客様の声" data-ur="ہمارے مہمان کیا کہتے ہیں">お客様の声</span></span>
+        <h2 class="section-title"><span data-en="Reviews" data-ja="口コミ" data-ur="جائزے">口コミ</span></h2>
         <div class="title-ornament">&#10053;</div>
       </div>
 
@@ -724,15 +742,13 @@
         <div class="testimonial-card fade-in">
           <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote class="testimonial-quote">
-            &ldquo;The biryani here is the best I've had outside of Hyderabad. The flavors are
-            incredibly authentic and the service is warm and welcoming. My whole family loves it.
-            We come every weekend now!&rdquo;
+            <span data-en="&ldquo;The biryani here is the best I've had outside of Hyderabad. The flavors are incredibly authentic and the service is warm and welcoming. My whole family loves it. We come every weekend now!&rdquo;" data-ja="「ここのビリヤニはハイデラバード以外で食べた中で最高です。味が本当に本格的で、サービスも温かくて居心地が良い。家族全員が大好きで、今では毎週末通っています！」" data-ur="&ldquo;یہاں کی بریانی حیدرآباد کے باہر میں نے کھائی ہوئی بہترین ہے۔ ذائقے ناقابل یقین حد تک مستند ہیں اور سروس گرمجوشی اور خوش آئند ہے۔ میرا پورا خاندان اسے پسند کرتا ہے۔ اب ہم ہر ہفتے کے آخر میں آتے ہیں!&rdquo;">「ここのビリヤニはハイデラバード以外で食べた中で最高です。味が本当に本格的で、サービスも温かくて居心地が良い。家族全員が大好きで、今では毎週末通っています！」</span>
           </blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">T</div>
             <div class="author-info">
               <span class="author-name">Tanaka Yusuke</span>
-              <span class="author-detail">Regular Guest</span>
+              <span class="author-detail"><span data-en="Regular Guest" data-ja="常連のお客様" data-ur="باقاعدہ مہمان">常連のお客様</span></span>
             </div>
           </div>
         </div>
@@ -740,15 +756,13 @@
         <div class="testimonial-card fade-in">
           <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote class="testimonial-quote">
-            &ldquo;Finally, truly halal food in Tokyo that doesn't compromise on taste!
-            The mutton nihari melts in your mouth. The atmosphere is beautiful and the staff
-            are so friendly. A hidden gem in Edogawa.&rdquo;
+            <span data-en="&ldquo;Finally, truly halal food in Tokyo that doesn't compromise on taste! The mutton nihari melts in your mouth. The atmosphere is beautiful and the staff are so friendly. A hidden gem in Edogawa.&rdquo;" data-ja="「ついに東京で味に妥協しない本物のハラール料理に出会えました！マトンニハリは口の中でとろけます。雰囲気も素敵で、スタッフもとても親切。江戸川区の隠れた名店です。」" data-ur="&ldquo;آخرکار، ٹوکیو میں واقعی حلال کھانا جو ذائقے پر سمجھوتہ نہیں کرتا! مٹن نہاری منہ میں گھل جاتی ہے۔ ماحول خوبصورت ہے اور عملہ بہت دوستانہ ہے۔ ایڈوگاوا کا ایک چھپا ہوا جواہر۔&rdquo;">「ついに東京で味に妥協しない本物のハラール料理に出会えました！マトンニハリは口の中でとろけます。雰囲気も素敵で、スタッフもとても親切。江戸川区の隠れた名店です。」</span>
           </blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">S</div>
             <div class="author-info">
               <span class="author-name">Suzuki Amina</span>
-              <span class="author-detail">Food Blogger</span>
+              <span class="author-detail"><span data-en="Food Blogger" data-ja="フードブロガー" data-ur="فوڈ بلاگر">フードブロガー</span></span>
             </div>
           </div>
         </div>
@@ -756,15 +770,13 @@
         <div class="testimonial-card fade-in">
           <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote class="testimonial-quote">
-            &ldquo;I brought my colleagues from Pakistan here and they were amazed
-            by the authentic taste. The karahi tastes exactly like home.
-            Great portion sizes and very reasonable prices for Tokyo. Highly recommended!&rdquo;
+            <span data-en="&ldquo;I brought my colleagues from Pakistan here and they were amazed by the authentic taste. The karahi tastes exactly like home. Great portion sizes and very reasonable prices for Tokyo. Highly recommended!&rdquo;" data-ja="「パキスタンから来た同僚を連れて行ったら、本格的な味に驚いていました。カラヒはまさに故郷の味。ボリュームたっぷりで、東京にしてはとてもリーズナブルな価格です。強くおすすめします！」" data-ur="&ldquo;میں اپنے پاکستان سے آئے ساتھیوں کو یہاں لایا اور وہ مستند ذائقے سے حیران رہ گئے۔ کڑاہی بالکل گھر جیسی ہے۔ بہترین مقدار اور ٹوکیو کے لیے بہت مناسب قیمتیں۔ انتہائی سفارش!&rdquo;">「パキスタンから来た同僚を連れて行ったら、本格的な味に驚いていました。カラヒはまさに故郷の味。ボリュームたっぷりで、東京にしてはとてもリーズナブルな価格です。強くおすすめします！」</span>
           </blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">K</div>
             <div class="author-info">
               <span class="author-name">Kobayashi Hiroshi</span>
-              <span class="author-detail">IT Professional</span>
+              <span class="author-detail"><span data-en="IT Professional" data-ja="IT技術者" data-ur="آئی ٹی پیشہ ور">IT技術者</span></span>
             </div>
           </div>
         </div>
@@ -776,40 +788,40 @@
   <section class="location" id="location">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-subtitle">Find Us</span>
-        <h2 class="section-title">Location & Hours</h2>
+        <span class="section-subtitle"><span data-en="Find Us" data-ja="アクセス" data-ur="ہمیں تلاش کریں">アクセス</span></span>
+        <h2 class="section-title"><span data-en="Location & Hours" data-ja="所在地・営業時間" data-ur="مقام اور اوقات">所在地・営業時間</span></h2>
         <div class="title-ornament">&#10053;</div>
       </div>
 
       <div class="location-grid">
         <div class="location-info fade-in">
           <div class="info-block">
-            <h3 class="info-title">&#128205; Address</h3>
+            <h3 class="info-title">&#128205; <span data-en="Address" data-ja="住所" data-ur="پتہ">住所</span></h3>
             <p class="info-text">1 Chome-8-21 Kamiisshiki<br>Edogawa City, Tokyo 133-0041</p>
           </div>
 
           <div class="info-block">
-            <h3 class="info-title">&#9742; Contact</h3>
+            <h3 class="info-title">&#9742; <span data-en="Contact" data-ja="お問い合わせ" data-ur="رابطہ">お問い合わせ</span></h3>
             <p class="info-text">
               <a href="tel:03-6808-8378" class="info-link">03-6808-8378</a><br>
-              <a href="mailto:info@urban-zaika.com" class="info-link">info@urban-zaika.com</a>
+              <span data-en="Email" data-ja="メール" data-ur="ای میل">メール</span>: <a href="mailto:info@urban-zaika.com" class="info-link">info@urban-zaika.com</a>
             </p>
           </div>
 
           <div class="info-block">
-            <h3 class="info-title">&#128338; Opening Hours</h3>
+            <h3 class="info-title">&#128338; <span data-en="Opening Hours" data-ja="営業時間" data-ur="کھلنے کے اوقات">営業時間</span></h3>
             <table class="hours-table">
               <tbody>
                 <tr>
-                  <td class="hours-label">Monday - Friday</td>
+                  <td class="hours-label"><span data-en="Monday - Friday" data-ja="月〜金" data-ur="پیر - جمعہ">月〜金</span></td>
                   <td class="hours-value">11:00 - 22:00</td>
                 </tr>
                 <tr>
-                  <td class="hours-label">Saturday</td>
+                  <td class="hours-label"><span data-en="Saturday" data-ja="土曜日" data-ur="ہفتہ">土曜日</span></td>
                   <td class="hours-value">11:00 - 22:00</td>
                 </tr>
                 <tr>
-                  <td class="hours-label">Sunday</td>
+                  <td class="hours-label"><span data-en="Sunday" data-ja="日曜日" data-ur="اتوار">日曜日</span></td>
                   <td class="hours-value">11:00 - 22:00</td>
                 </tr>
               </tbody>
@@ -819,7 +831,7 @@
           <div class="info-block">
             <div class="halal-badge-location">
               <span class="halal-icon">&#9774;</span>
-              <span class="halal-text-sm">100% Halal Certified</span>
+              <span class="halal-text-sm"><span data-en="100% Halal Certified" data-ja="100% ハラール認証" data-ur="100% حلال تصدیق شدہ">100% ハラール認証</span></span>
             </div>
           </div>
         </div>
@@ -849,35 +861,43 @@
           <h3 class="footer-logo">
             <span class="logo-icon">&#9775;</span> Urban Zaika
           </h3>
-          <p class="footer-tagline">Authentic Halal Indian & Pakistani Cuisine in Tokyo</p>
+          <p class="footer-tagline"><span data-en="Authentic Halal Indian & Pakistani Cuisine in Tokyo" data-ja="東京の本格ハラール インド・パキスタン料理" data-ur="ٹوکیو میں مستند حلال ہندوستانی اور پاکستانی کھانے">東京の本格ハラール インド・パキスタン料理</span></p>
           <p class="footer-contact-info">
             <a href="mailto:info@urban-zaika.com" class="footer-email">info@urban-zaika.com</a>
           </p>
           <div class="footer-halal">
             <span class="halal-icon">&#9774;</span>
-            <span>100% Halal Certified</span>
+            <span><span data-en="100% Halal Certified" data-ja="100% ハラール認証" data-ur="100% حلال تصدیق شدہ">100% ハラール認証</span></span>
           </div>
         </div>
 
         <div class="footer-links">
-          <h4 class="footer-heading">Quick Links</h4>
+          <h4 class="footer-heading"><span data-en="Quick Links" data-ja="リンク" data-ur="فوری لنکس">リンク</span></h4>
           <ul>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#specialties">Specialties</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#location">Location</a></li>
+            <li><a href="#about"><span data-en="About Us" data-ja="お店について" data-ur="ہمارے بارے میں">お店について</span></a></li>
+            <li><a href="#menu"><span data-en="Menu" data-ja="メニュー" data-ur="مینو">メニュー</span></a></li>
+            <li><a href="#specialties"><span data-en="Specialties" data-ja="おすすめ" data-ur="خصوصیات">おすすめ</span></a></li>
+            <li><a href="#gallery"><span data-en="Gallery" data-ja="ギャラリー" data-ur="گیلری">ギャラリー</span></a></li>
+            <li><a href="#testimonials"><span data-en="Reviews" data-ja="口コミ" data-ur="جائزے">口コミ</span></a></li>
+            <li><a href="#location"><span data-en="Location" data-ja="アクセス" data-ur="مقام">アクセス</span></a></li>
+          </ul>
+          <h4 class="footer-heading footer-heading-review"><span data-en="Review Sites" data-ja="レビューサイト" data-ur="جائزہ سائٹس">レビューサイト</span></h4>
+          <ul>
+            <li><a href="/review/"><span data-en="Google Review" data-ja="Google口コミ" data-ur="گوگل جائزہ">Google口コミ</span></a></li>
+            <li><a href="#"><span data-en="Tabelog" data-ja="食べログ" data-ur="ٹیبلاگ">食べログ</span></a></li>
+            <li><a href="#"><span data-en="Halal Gourmet Japan" data-ja="ハラールグルメジャパン" data-ur="حلال گورمے جاپان">ハラールグルメジャパン</span></a></li>
+            <li><a href="#"><span data-en="Hot Pepper" data-ja="ホットペッパー" data-ur="ہاٹ پیپر">ホットペッパー</span></a></li>
           </ul>
         </div>
 
         <div class="footer-social">
-          <h4 class="footer-heading">Follow Us</h4>
+          <h4 class="footer-heading"><span data-en="Follow Us" data-ja="フォローする" data-ur="ہمیں فالو کریں">フォローする</span></h4>
           <div class="social-links">
             <a href="#" class="social-link" aria-label="Instagram">&#9679; Instagram</a>
             <a href="#" class="social-link" aria-label="Facebook">&#9679; Facebook</a>
             <a href="#" class="social-link" aria-label="Twitter">&#9679; X / Twitter</a>
             <a href="#" class="social-link" aria-label="Google Maps">&#9679; Google Maps</a>
+            <a href="https://line.me/R/ti/p/@urbanzaika" class="social-link" aria-label="LINE" target="_blank" rel="noopener">&#9679; LINE</a>
           </div>
         </div>
       </div>
@@ -889,10 +909,15 @@
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/810368088378?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Order via WhatsApp">
-    <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+  <!-- Floating Buttons (LINE + WhatsApp stacked) -->
+  <div class="floating-buttons">
+    <a href="https://line.me/R/ti/p/@urbanzaika" class="line-float" target="_blank" rel="noopener" aria-label="Chat on LINE">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    </a>
+    <a href="https://wa.me/819066582838?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Order via WhatsApp">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -903,11 +928,15 @@
   <div class="mobile-cta-bar" id="mobileCta">
     <a href="tel:03-6808-8378" class="cta-btn cta-call">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-      Call Now
+      <span data-en="Call Now" data-ja="電話する" data-ur="ابھی کال کریں">電話する</span>
+    </a>
+    <a href="https://line.me/R/ti/p/@urbanzaika" class="cta-btn cta-line" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.271.173-.508.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINE
     </a>
     <a href="https://www.google.com/maps/dir/?api=1&destination=Urban+Zaika+Halal+Restaurant+Edogawa+Tokyo" class="cta-btn cta-directions" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.71 11.29l-9-9a.996.996 0 00-1.41 0l-9 9a.996.996 0 000 1.41l9 9c.39.39 1.02.39 1.41 0l9-9a.996.996 0 000-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
-      Directions
+      <span data-en="Directions" data-ja="道順" data-ur="سمت">道順</span>
     </a>
   </div>
 
