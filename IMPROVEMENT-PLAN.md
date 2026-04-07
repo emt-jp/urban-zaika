@@ -11,22 +11,22 @@
 ### 1. Google Maps Embed
 **Why:** Customers search "halal food near me" — a map helps them find you and builds trust.
 
-- [ ] Add an embedded Google Map in the Contact/Access section
-- [ ] Use the iframe embed from Google Maps for location: 1-8-21 Kamiisshiki, Edogawa City
-- [ ] Add bilingual labels (EN/JA) for directions text
-- [ ] Add nearby station info (最寄り駅) — Shinkoiwa Station (新小岩駅), bus/walk directions
-- [ ] Make the map responsive for mobile
-- [ ] Add a "Get Directions" button linking to Google Maps navigation
+- [x] Add an embedded Google Map in the Contact/Access section
+- [x] Use the iframe embed from Google Maps for location: 1-8-21 Kamiisshiki, Edogawa City
+- [x] Add bilingual labels (EN/JA) for directions text
+- [x] Add nearby station info (最寄り駅) — Shinkoiwa Station (新小岩駅), bus/walk directions
+- [x] Make the map responsive for mobile
+- [x] Add a "Get Directions" button linking to Google Maps navigation
 
 ### 2. Online Ordering / Delivery Platform Links
 **Why:** Delivery is a massive revenue channel in Tokyo — no links currently exist on the site.
 
 - [ ] Research and confirm which platforms Urban Zaika is listed on (UberEats, Demaecan, Wolt, menu)
 - [ ] Register on platforms not yet listed (prioritize UberEats and Demaecan)
-- [ ] Add a dedicated "Order Online" section or banner on the website
-- [ ] Add platform logos with direct links to each ordering page
-- [ ] Add delivery links to the mobile CTA bar
-- [ ] Bilingual labels: "デリバリー注文" / "Order Delivery"
+- [x] Add a dedicated "Order Online" section or banner on the website
+- [x] Add platform logos with direct links to each ordering page
+- [x] Add delivery links to the mobile CTA bar
+- [x] Bilingual labels: "デリバリー注文" / "Order Delivery"
 
 ### 3. Google Business Profile Link
 **Why:** Most Tokyo restaurant discovery happens through Google Maps — this is the #1 local SEO driver.
@@ -108,7 +108,7 @@
 - [ ] Display Google review rating badge (star rating + review count)
 - [ ] Add a "Write a Review" CTA linking to Google Business Profile
 - [ ] Show review snippets with customer name and star rating
-- [ ] Add review structured data (`@type: Review`) to JSON-LD for rich snippets
+- [x] Add review structured data (`@type: Review`) to JSON-LD for rich snippets
 - [ ] Bilingual review display (translate if needed)
 
 ### 9. Lunch Set Menu Promotion

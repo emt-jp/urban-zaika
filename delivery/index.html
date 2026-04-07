@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>デリバリー・テイクアウト｜Urban Zaika｜ハラルインド・パキスタン料理｜江戸川区</title>
+  <meta name="description" content="Urban Zaikaのデリバリー・テイクアウトメニュー。ビリヤニ、カレーセット、ケバブなど本格ハラール料理をお届け。Uber Eats・出前館・WhatsAppで注文可能。Halal delivery in Edogawa, Tokyo.">
+  <meta name="keywords" content="ハラル デリバリー 東京, インドカレー 出前, パキスタン料理 テイクアウト, ハラル 宅配 江戸川区, halal delivery Tokyo, Urban Zaika delivery">
+  <link rel="canonical" href="https://urban-zaika.com/delivery/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="デリバリー・テイクアウト｜Urban Zaika">
+  <meta property="og:description" content="本格ハラールインド・パキスタン料理をデリバリー。ビリヤニ、カレーセット、ファミリーセットなど。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://urban-zaika.com/delivery/">
+  <meta property="og:image" content="https://urban-zaika.com/images/butter-chicken.webp">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Google Analytics -->
+  <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-XFYZQ5NKZN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFYZQ5NKZN');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --burgundy: #8B1A1A;
+      --burgundy-dark: #6B1010;
+      --gold: #D4A843;
+      --gold-light: #E8C96A;
+      --cream: #FFF8F0;
+      --charcoal: #1A1A1A;
+      --charcoal-light: #2D2D2D;
+      --green: #2D5A27;
+      --whatsapp-green: #25D366;
+      --line-green: #06C755;
+      --white: #FFFFFF;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+      --transition: 0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+    html[dir="rtl"] { font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif; }
+
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; color: inherit; transition: color var(--transition); }
+
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== HEADER ===== */
+    .page-header {
+      background: linear-gradient(135deg, var(--charcoal) 0%, var(--burgundy-dark) 50%, var(--charcoal) 100%);
+      padding: 48px 0 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .page-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,168,67,0.1) 0%, transparent 70%);
+    }
+
+    .header-content { position: relative; z-index: 1; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,248,240,0.7);
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      transition: color var(--transition);
+    }
+    .back-link:hover { color: var(--gold); }
+
+    .page-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .page-logo .logo-icon { font-size: 1.6rem; }
+
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+      color: rgba(255,248,240,0.7);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .lang-btn {
+      background: rgba(255,248,240,0.1);
+      border: 1px solid rgba(212,168,67,0.3);
+      color: rgba(255,248,240,0.7);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--gold);
+      color: var(--charcoal);
+      border-color: var(--gold);
+    }
+
+    /* ===== ORDER PLATFORMS ===== */
+    .platforms {
+      padding: 48px 0;
+      background: var(--charcoal);
+    }
+
+    .platforms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .platform-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 28px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(212,168,67,0.2);
+      background: var(--charcoal-light);
+      text-align: center;
+      transition: all var(--transition);
+    }
+    .platform-card-active { cursor: pointer; }
+    .platform-card-active:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(212,168,67,0.15);
+    }
+    .platform-card-inactive { opacity: 0.5; }
+
+    .platform-icon { font-size: 2rem; }
+    .platform-name { font-weight: 600; color: var(--cream); font-size: 1rem; }
+    .platform-sub { font-size: 0.8rem; color: rgba(255,248,240,0.5); }
+
+    .platform-badge {
+      display: inline-block;
+      padding: 3px 14px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .badge-active { background: var(--gold); color: var(--charcoal); }
+    .badge-soon { background: rgba(255,248,240,0.1); color: rgba(255,248,240,0.4); }
+
+    /* ===== MENU SECTIONS ===== */
+    .menu-section { padding: 64px 0 32px; }
+    .menu-section:nth-child(even) { background: var(--white); }
+
+    .section-label {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--burgundy-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 20px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 6px;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: #777;
+      margin-bottom: 32px;
+    }
+
+    /* Menu Table */
+    .menu-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .menu-table tr {
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .menu-table td {
+      padding: 14px 0;
+      vertical-align: middle;
+    }
+
+    .item-name-col {
+      font-weight: 500;
+      color: var(--charcoal);
+      font-size: 0.95rem;
+    }
+
+    .item-name-jp {
+      font-size: 0.8rem;
+      color: #999;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .item-note {
+      font-size: 0.78rem;
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .item-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .tag-popular { background: #FFF3E0; color: #E65100; }
+    .tag-recommended { background: #E8F5E9; color: #2E7D32; }
+
+    .item-price-col {
+      text-align: right;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--burgundy);
+      white-space: nowrap;
+      width: 100px;
+    }
+
+    /* ===== COMBO SETS ===== */
+    .combos-section {
+      padding: 64px 0;
+      background: linear-gradient(135deg, var(--burgundy-dark) 0%, var(--burgundy) 50%, var(--burgundy-dark) 100%);
+      position: relative;
+    }
+    .combos-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(212,168,67,0.1) 0%, transparent 70%);
+    }
+
+    .combos-header {
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .combos-header .section-title { color: var(--cream); }
+    .combos-header .section-desc { color: rgba(255,248,240,0.7); }
+
+    .combos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .combo-card {
+      background: rgba(255,248,240,0.08);
+      border: 1px solid rgba(212,168,67,0.3);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      transition: all var(--transition);
+    }
+    .combo-card:hover {
+      border-color: var(--gold);
+      background: rgba(255,248,240,0.12);
+      transform: translateY(-2px);
+    }
+
+    .combo-label {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--burgundy-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 12px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    .combo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+
+    .combo-items {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+    .combo-items li {
+      font-size: 0.88rem;
+      color: rgba(255,248,240,0.75);
+      padding: 3px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+    .combo-items li::before {
+      content: '+ ';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .combo-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .combo-serves {
+      font-size: 0.78rem;
+      color: rgba(255,248,240,0.5);
+      margin-left: 8px;
+    }
+
+    /* ===== INFO BAR ===== */
+    .info-bar {
+      background: var(--charcoal);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .info-items {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,248,240,0.8);
+      font-size: 0.9rem;
+    }
+    .info-icon { font-size: 1.3rem; }
+
+    /* ===== PACKAGING NOTE ===== */
+    .packaging {
+      padding: 48px 0;
+      text-align: center;
+    }
+
+    .packaging-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    .packaging-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pack-item {
+      padding: 20px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+    .pack-icon { font-size: 2rem; margin-bottom: 8px; }
+    .pack-text { font-size: 0.85rem; color: #666; }
+
+    /* ===== ORDER CTA ===== */
+    .order-cta {
+      padding: 60px 0;
+      background: linear-gradient(135deg, var(--charcoal) 0%, var(--burgundy-dark) 50%, var(--charcoal) 100%);
+      text-align: center;
+    }
+
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 8px;
+    }
+
+    .cta-sub {
+      font-size: 1rem;
+      color: rgba(255,248,240,0.7);
+      margin-bottom: 28px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .cta-whatsapp {
+      background: var(--whatsapp-green);
+      color: #fff;
+    }
+    .cta-whatsapp:hover {
+      background: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+
+    .cta-phone {
+      background: transparent;
+      color: var(--cream);
+      border-color: var(--cream);
+    }
+    .cta-phone:hover {
+      background: var(--cream);
+      color: var(--charcoal);
+      transform: translateY(-2px);
+    }
+
+    .cta-home {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+    .cta-home:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    /* ===== FOOTER ===== */
+    .page-footer {
+      background: var(--charcoal);
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-size: 0.82rem;
+      color: rgba(255,248,240,0.4);
+    }
+    .footer-text a { color: var(--gold); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .combos-grid { grid-template-columns: 1fr; }
+      .packaging-grid { grid-template-columns: 1fr; max-width: 300px; }
+      .info-items { gap: 20px; }
+    }
+
+    @media (max-width: 480px) {
+      .platforms-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .platform-card { padding: 20px 12px; }
+      .cta-buttons { flex-direction: column; align-items: center; }
+      .cta-btn { width: 100%; max-width: 300px; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container header-content">
+      <a href="/" class="back-link">&larr; <span data-en="Back to Urban Zaika" data-ja="トップページへ戻る" data-ur="واپس جائیں">トップページへ戻る</span></a>
+      <div class="page-logo"><span class="logo-icon">&#9775;</span> Urban Zaika</div>
+      <h1 class="page-title"><span data-en="Delivery & Takeout Menu" data-ja="デリバリー・テイクアウトメニュー" data-ur="ڈیلیوری اور ٹیک آؤٹ مینو">デリバリー・テイクアウトメニュー</span></h1>
+      <p class="page-subtitle"><span data-en="100% Halal | Authentic Indian & Pakistani Cuisine delivered to your door" data-ja="100%ハラール｜本格インド・パキスタン料理をご自宅にお届け" data-ur="100% حلال | مستند ہندوستانی اور پاکستانی کھانے آپ کے دروازے تک">100%ハラール｜本格インド・パキスタン料理をご自宅にお届け</span></p>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('ja')">日本語</button>
+        <button class="lang-btn" onclick="setLang('en')">English</button>
+        <button class="lang-btn" onclick="setLang('ur')">اردو</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Order Platforms -->
+  <section class="platforms">
+    <div class="container">
+      <div class="platforms-grid">
+        <a href="https://wa.me/819066582838?text=Hi%2C%20I%27d%20like%20to%20place%20a%20delivery%20order" class="platform-card platform-card-active" target="_blank" rel="noopener" onclick="gtag('event','click_delivery',{platform:'whatsapp',page:'delivery'})">
+          <span class="platform-icon">&#128242;</span>
+          <span class="platform-name">WhatsApp</span>
+          <span class="platform-sub"><span data-en="Direct order, no fees" data-ja="直接注文・手数料なし" data-ur="براہ راست آرڈر، کوئی فیس نہیں">直接注文・手数料なし</span></span>
+          <span class="platform-badge badge-active"><span data-en="Order Now" data-ja="今すぐ注文" data-ur="ابھی آرڈر کریں">今すぐ注文</span></span>
+        </a>
+        <div class="platform-card platform-card-inactive">
+          <span class="platform-icon">&#127861;</span>
+          <span class="platform-name">Uber Eats</span>
+          <span class="platform-sub"><span data-en="Coming soon" data-ja="近日公開" data-ur="جلد آ رہا ہے">近日公開</span></span>
+          <span class="platform-badge badge-soon"><span data-en="Soon" data-ja="準備中" data-ur="جلد">準備中</span></span>
+        </div>
+        <div class="platform-card platform-card-inactive">
+          <span class="platform-icon">&#128666;</span>
+          <span class="platform-name"><span data-en="Demaecan" data-ja="出前館" data-ur="دیمائیکان">出前館</span></span>
+          <span class="platform-sub"><span data-en="Coming soon" data-ja="近日公開" data-ur="جلد آ رہا ہے">近日公開</span></span>
+          <span class="platform-badge badge-soon"><span data-en="Soon" data-ja="準備中" data-ur="جلد">準備中</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Info Bar -->
+  <section class="info-bar">
+    <div class="container">
+      <div class="info-items">
+        <div class="info-item">
+          <span class="info-icon">&#9774;</span>
+          <span><span data-en="100% Halal" data-ja="100%ハラール" data-ur="100% حلال">100%ハラール</span></span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#128338;</span>
+          <span><span data-en="11:00 - 21:30 (Last order)" data-ja="11:00 - 21:30（ラストオーダー）" data-ur="11:00 - 21:30 (آخری آرڈر)">11:00 - 21:30（ラストオーダー）</span></span>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">&#128176;</span>
+          <span><span data-en="Min. order &yen;1,000" data-ja="最低注文 &yen;1,000" data-ur="کم از کم آرڈر ¥1,000">最低注文 &yen;1,000</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curry Sets -->
+  <section class="menu-section">
+    <div class="container">
+      <span class="section-label"><span data-en="Most Popular" data-ja="人気No.1" data-ur="سب سے مقبول">人気No.1</span></span>
+      <h2 class="section-title"><span data-en="Curry Sets" data-ja="カレーセット" data-ur="سالن سیٹ">カレーセット</span></h2>
+      <p class="section-desc"><span data-en="Comes with naan or rice + drink" data-ja="ナンまたはライス＋ドリンク付き" data-ur="نان یا چاول + مشروب کے ساتھ">ナンまたはライス＋ドリンク付き</span></p>
+      <table class="menu-table">
+        <tr>
+          <td class="item-name-col">Chicken Curry Set<span class="item-name-jp">チキンカレーセット</span></td>
+          <td class="item-price-col">&yen;1,100</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Vegetable Curry Set<span class="item-name-jp">ベジタブルカレーセット</span></td>
+          <td class="item-price-col">&yen;1,050</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Fish Curry Set<span class="item-name-jp">フィッシュカレーセット</span></td>
+          <td class="item-price-col">&yen;1,350</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Mutton Curry Set <span class="item-tag tag-popular">Popular</span><span class="item-name-jp">マトンカレーセット</span></td>
+          <td class="item-price-col">&yen;1,500</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Chicken Saag Set<span class="item-name-jp">チキンサーグセット</span></td>
+          <td class="item-price-col">&yen;1,100</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Mutton Saag Set<span class="item-name-jp">マトンサーグセット</span></td>
+          <td class="item-price-col">&yen;1,500</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Prawn Curry Set<span class="item-name-jp">エビカレーセット</span></td>
+          <td class="item-price-col">&yen;1,500</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Chana Daal Set<span class="item-name-jp">チャナダールセット</span></td>
+          <td class="item-price-col">&yen;750</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Aloo Palak Set<span class="item-name-jp">アルーパラクセット</span></td>
+          <td class="item-price-col">&yen;1,100</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Specialties -->
+  <section class="menu-section">
+    <div class="container">
+      <span class="section-label"><span data-en="Chef's Best" data-ja="シェフのおすすめ" data-ur="شیف کی پسند">シェフのおすすめ</span></span>
+      <h2 class="section-title"><span data-en="Specialties" data-ja="スペシャリティ" data-ur="خصوصیات">スペシャリティ</span></h2>
+      <p class="section-desc"><span data-en="Our signature dishes, perfect for delivery" data-ja="看板メニュー。デリバリーにも最適" data-ur="ہمارے خاص پکوان، ڈیلیوری کے لیے بہترین">看板メニュー。デリバリーにも最適</span></p>
+      <table class="menu-table">
+        <tr>
+          <td class="item-name-col">Hyderabadi Biryani <span class="item-tag tag-popular">Signature</span><span class="item-name-jp">ハイデラバーディービリヤニ</span></td>
+          <td class="item-price-col">&yen;1,350</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Mutton Nihari <span class="item-tag tag-recommended">Best Seller</span><span class="item-name-jp">マトンニハリ</span></td>
+          <td class="item-price-col">&yen;1,550</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Chicken Karahi<span class="item-name-jp">チキンカラヒ</span></td>
+          <td class="item-price-col">&yen;1,350</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Tandoori & Kebabs -->
+  <section class="menu-section">
+    <div class="container">
+      <span class="section-label"><span data-en="Grilled" data-ja="焼き物" data-ur="تندوری">焼き物</span></span>
+      <h2 class="section-title"><span data-en="Tandoori & Kebabs" data-ja="タンドリー・ケバブ" data-ur="تندوری اور کباب">タンドリー・ケバブ</span></h2>
+      <p class="section-desc"><span data-en="Travels great, perfect as a side or main" data-ja="持ち帰りに最適。メインにもサイドにも" data-ur="ٹیک آؤٹ کے لیے بہترین">持ち帰りに最適。メインにもサイドにも</span></p>
+      <table class="menu-table">
+        <tr>
+          <td class="item-name-col">Chicken Tikka <span class="item-tag tag-popular">Popular</span><span class="item-name-jp">チキンティッカ</span></td>
+          <td class="item-price-col">&yen;1,100</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Tandoori Chicken<span class="item-name-jp">タンドリーチキン</span></td>
+          <td class="item-price-col">&yen;1,200</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Malai Tikka<span class="item-name-jp">マライティッカ</span></td>
+          <td class="item-price-col">&yen;1,050</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Chicken Seekh Kebab <span class="item-note">(2pc)</span><span class="item-name-jp">チキンシークケバブ</span></td>
+          <td class="item-price-col">&yen;800</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Mutton Seekh Kebab <span class="item-note">(2pc)</span><span class="item-name-jp">マトンシークケバブ</span></td>
+          <td class="item-price-col">&yen;900</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Chicken Boti <span class="item-note">(4pc)</span><span class="item-name-jp">チキンボティ</span></td>
+          <td class="item-price-col">&yen;1,100</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Wraps & Burgers -->
+  <section class="menu-section">
+    <div class="container">
+      <span class="section-label"><span data-en="Quick Bites" data-ja="軽食" data-ur="ہلکا کھانا">軽食</span></span>
+      <h2 class="section-title"><span data-en="Rolls & Burgers" data-ja="ロール・バーガー" data-ur="رولز اور برگر">ロール・バーガー</span></h2>
+      <p class="section-desc"><span data-en="Easy to eat, easy to carry" data-ja="食べやすく、持ち運びにも便利" data-ur="کھانے میں آسان، لے جانے میں آسان">食べやすく、持ち運びにも便利</span></p>
+      <table class="menu-table">
+        <tr>
+          <td class="item-name-col">Chicken Roll<span class="item-name-jp">チキンロール</span></td>
+          <td class="item-price-col">&yen;600</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Beef Roll<span class="item-name-jp">ビーフロール</span></td>
+          <td class="item-price-col">&yen;950</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Shami Burger<span class="item-name-jp">シャミバーガー</span></td>
+          <td class="item-price-col">&yen;500</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Crispy Chicken Burger<span class="item-name-jp">クリスピーチキンバーガー</span></td>
+          <td class="item-price-col">&yen;750</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Beef Burger<span class="item-name-jp">ビーフバーガー</span></td>
+          <td class="item-price-col">&yen;850</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Crispy Fish Burger<span class="item-name-jp">クリスピーフィッシュバーガー</span></td>
+          <td class="item-price-col">&yen;750</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Breads & Extras -->
+  <section class="menu-section">
+    <div class="container">
+      <span class="section-label"><span data-en="Sides" data-ja="サイド" data-ur="ساتھ">サイド</span></span>
+      <h2 class="section-title"><span data-en="Breads & Extras" data-ja="パン・サイドメニュー" data-ur="روٹیاں اور اضافی">パン・サイドメニュー</span></h2>
+      <table class="menu-table">
+        <tr>
+          <td class="item-name-col">Butter Naan<span class="item-name-jp">バターナン</span></td>
+          <td class="item-price-col">&yen;330</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Garlic Naan<span class="item-name-jp">ガーリックナン</span></td>
+          <td class="item-price-col">&yen;450</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Cheese Naan<span class="item-name-jp">チーズナン</span></td>
+          <td class="item-price-col">&yen;550</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Chapati<span class="item-name-jp">チャパティ</span></td>
+          <td class="item-price-col">&yen;250</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Paratha<span class="item-name-jp">パラタ</span></td>
+          <td class="item-price-col">&yen;500</td>
+        </tr>
+        <tr>
+          <td class="item-name-col">Kheer <span class="item-note">(dessert)</span><span class="item-name-jp">キール（デザート）</span></td>
+          <td class="item-price-col">&yen;400</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- Combo Sets -->
+  <section class="combos-section">
+    <div class="container">
+      <div class="combos-header">
+        <span class="section-label"><span data-en="Best Value" data-ja="お得なセット" data-ur="بہترین قیمت">お得なセット</span></span>
+        <h2 class="section-title"><span data-en="Combo Sets" data-ja="コンボセット" data-ur="کومبو سیٹ">コンボセット</span></h2>
+        <p class="section-desc"><span data-en="Perfect for sharing or a big appetite" data-ja="シェアにも、がっつり食べたい方にも" data-ur="شیئرنگ کے لیے یا بڑی بھوک کے لیے بہترین">シェアにも、がっつり食べたい方にも</span></p>
+      </div>
+
+      <div class="combos-grid">
+        <div class="combo-card">
+          <span class="combo-label">SET A</span>
+          <h3 class="combo-name"><span data-en="Urban Zaika Lunch Box" data-ja="アーバンザイカ ランチボックス" data-ur="اربن ذائقہ لنچ باکس">アーバンザイカ ランチボックス</span></h3>
+          <ul class="combo-items">
+            <li><span data-en="Choice of curry (chicken or vegetable)" data-ja="カレー1種（チキンまたは野菜）" data-ur="سالن (چکن یا سبزی)">カレー1種（チキンまたは野菜）</span></li>
+            <li><span data-en="Naan" data-ja="ナン" data-ur="نان">ナン</span></li>
+            <li><span data-en="Seekh kebab (1pc)" data-ja="シークケバブ 1本" data-ur="سیخ کباب (1)">シークケバブ 1本</span></li>
+            <li><span data-en="Drink" data-ja="ドリンク" data-ur="مشروب">ドリンク</span></li>
+          </ul>
+          <div>
+            <span class="combo-price">&yen;1,100</span>
+            <span class="combo-serves"><span data-en="1 person" data-ja="1名様" data-ur="1 فرد">1名様</span></span>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <span class="combo-label">SET B</span>
+          <h3 class="combo-name"><span data-en="Biryani Combo" data-ja="ビリヤニコンボ" data-ur="بریانی کومبو">ビリヤニコンボ</span></h3>
+          <ul class="combo-items">
+            <li><span data-en="Hyderabadi Biryani" data-ja="ハイデラバーディービリヤニ" data-ur="حیدرآبادی بریانی">ハイデラバーディービリヤニ</span></li>
+            <li><span data-en="Seekh kebab (2pc)" data-ja="シークケバブ 2本" data-ur="سیخ کباب (2)">シークケバブ 2本</span></li>
+            <li><span data-en="Mint chatni salad" data-ja="ミントチャツネサラダ" data-ur="پودینے کی چٹنی سلاد">ミントチャツネサラダ</span></li>
+            <li><span data-en="Drink" data-ja="ドリンク" data-ur="مشروب">ドリンク</span></li>
+          </ul>
+          <div>
+            <span class="combo-price">&yen;1,500</span>
+            <span class="combo-serves"><span data-en="1 person" data-ja="1名様" data-ur="1 فرد">1名様</span></span>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <span class="combo-label">SET C</span>
+          <h3 class="combo-name"><span data-en="Family Set" data-ja="ファミリーセット" data-ur="فیملی سیٹ">ファミリーセット</span></h3>
+          <ul class="combo-items">
+            <li><span data-en="2 curries (your choice)" data-ja="カレー2種（お好みで）" data-ur="2 سالن (آپ کی پسند)">カレー2種（お好みで）</span></li>
+            <li><span data-en="Naan x3" data-ja="ナン 3枚" data-ur="نان x3">ナン 3枚</span></li>
+            <li><span data-en="Chicken tikka" data-ja="チキンティッカ" data-ur="چکن ٹکا">チキンティッカ</span></li>
+            <li><span data-en="Kheer x2" data-ja="キール 2個" data-ur="کھیر x2">キール 2個</span></li>
+          </ul>
+          <div>
+            <span class="combo-price">&yen;2,800</span>
+            <span class="combo-serves"><span data-en="2-3 people" data-ja="2〜3名様" data-ur="2-3 افراد">2〜3名様</span></span>
+          </div>
+        </div>
+
+        <div class="combo-card">
+          <span class="combo-label">SET D</span>
+          <h3 class="combo-name"><span data-en="Party Set" data-ja="パーティーセット" data-ur="پارٹی سیٹ">パーティーセット</span></h3>
+          <ul class="combo-items">
+            <li><span data-en="Biryani" data-ja="ビリヤニ" data-ur="بریانی">ビリヤニ</span></li>
+            <li><span data-en="Karahi" data-ja="カラヒ" data-ur="کڑاہی">カラヒ</span></li>
+            <li><span data-en="Naan x4" data-ja="ナン 4枚" data-ur="نان x4">ナン 4枚</span></li>
+            <li><span data-en="Tandoori chicken" data-ja="タンドリーチキン" data-ur="تندوری چکن">タンドリーチキン</span></li>
+            <li><span data-en="Seekh kebab (4pc)" data-ja="シークケバブ 4本" data-ur="سیخ کباب (4)">シークケバブ 4本</span></li>
+            <li><span data-en="Kheer x3" data-ja="キール 3個" data-ur="کھیر x3">キール 3個</span></li>
+          </ul>
+          <div>
+            <span class="combo-price">&yen;4,800</span>
+            <span class="combo-serves"><span data-en="4-5 people" data-ja="4〜5名様" data-ur="4-5 افراد">4〜5名様</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packaging Promise -->
+  <section class="packaging">
+    <div class="container">
+      <h2 class="packaging-title"><span data-en="Our Delivery Promise" data-ja="デリバリーのこだわり" data-ur="ہماری ڈیلیوری کا وعدہ">デリバリーのこだわり</span></h2>
+      <div class="packaging-grid">
+        <div class="pack-item">
+          <div class="pack-icon">&#127834;</div>
+          <p class="pack-text"><span data-en="Curry & rice packed separately to stay fresh" data-ja="カレーとライスは別容器で鮮度キープ" data-ur="کری اور چاول تازگی کے لیے الگ پیک">カレーとライスは別容器で鮮度キープ</span></p>
+        </div>
+        <div class="pack-item">
+          <div class="pack-icon">&#9774;</div>
+          <p class="pack-text"><span data-en="100% halal ingredients, always" data-ja="100%ハラール食材を徹底" data-ur="ہمیشہ 100% حلال اجزاء">100%ハラール食材を徹底</span></p>
+        </div>
+        <div class="pack-item">
+          <div class="pack-icon">&#128293;</div>
+          <p class="pack-text"><span data-en="Freshly prepared for every order" data-ja="注文ごとに出来たてをご提供" data-ur="ہر آرڈر تازہ تیار">注文ごとに出来たてをご提供</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order CTA -->
+  <section class="order-cta">
+    <div class="container">
+      <h2 class="cta-title"><span data-en="Ready to Order?" data-ja="ご注文はこちら" data-ur="آرڈر کرنے کے لیے تیار ہیں؟">ご注文はこちら</span></h2>
+      <p class="cta-sub"><span data-en="Order directly via WhatsApp for the best prices — no platform fees!" data-ja="WhatsAppで直接注文がお得！手数料なしの特別価格" data-ur="بہترین قیمتوں کے لیے واٹس ایپ سے براہ راست آرڈر کریں — کوئی پلیٹ فارم فیس نہیں!">WhatsAppで直接注文がお得！手数料なしの特別価格</span></p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/819066582838?text=Hi%2C%20I%27d%20like%20to%20order%20from%20the%20delivery%20menu" class="cta-btn cta-whatsapp" target="_blank" rel="noopener" onclick="gtag('event','click_delivery_cta',{method:'whatsapp'})">
+          &#128242; <span data-en="WhatsApp Order" data-ja="WhatsAppで注文" data-ur="واٹس ایپ سے آرڈر">WhatsAppで注文</span>
+        </a>
+        <a href="tel:03-6808-8378" class="cta-btn cta-phone" onclick="gtag('event','click_delivery_cta',{method:'phone'})">
+          &#9742; <span data-en="Call to Order" data-ja="電話で注文" data-ur="فون سے آرڈر">電話で注文</span>
+        </a>
+        <a href="/" class="cta-btn cta-home">
+          &#9775; <span data-en="Back to Home" data-ja="トップページへ" data-ur="ہوم پیج">トップページへ</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <p class="footer-text">&copy; 2025-2026 <a href="/">Urban Zaika</a>. 100% Halal | Edogawa, Tokyo</p>
+    </div>
+  </footer>
+
+  <!-- Language Switcher Script -->
+  <script>
+    const langLabels = { en: 'English', ja: '日本語', ur: 'اردو' };
+    let currentLang = localStorage.getItem('uz-lang') || 'ja';
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('uz-lang', lang);
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ur' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text !== null) el.textContent = text;
+      });
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === langLabels[lang]);
+      });
+
+      gtag('event', 'switch_language', { language: lang, page: 'delivery' });
+    }
+
+    setLang(currentLang);
+  </script>
+</body>
+</html>

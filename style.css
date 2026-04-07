@@ -1622,6 +1622,117 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
+   DELIVERY SECTION
+   ========================================================================== */
+.delivery-section {
+  padding: 100px 0;
+  background: var(--charcoal);
+  position: relative;
+}
+
+.delivery-section .section-subtitle {
+  color: var(--gold);
+}
+
+.delivery-section .section-title {
+  color: var(--cream);
+}
+
+.delivery-section .section-desc {
+  color: rgba(255, 248, 240, 0.7);
+}
+
+.delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.delivery-card {
+  background: var(--charcoal-light);
+  border: 1px solid rgba(212, 168, 67, 0.2);
+  border-radius: var(--radius-md);
+  padding: 32px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all var(--transition);
+  opacity: 0.6;
+  cursor: default;
+}
+
+.delivery-card-active {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.delivery-card-active:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(212, 168, 67, 0.15);
+}
+
+.delivery-icon {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+}
+
+.delivery-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cream);
+}
+
+.delivery-desc {
+  font-size: 0.85rem;
+  color: rgba(255, 248, 240, 0.6);
+}
+
+.delivery-badge {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(255, 248, 240, 0.1);
+  color: rgba(255, 248, 240, 0.5);
+  margin-top: 4px;
+}
+
+.delivery-badge-active {
+  background: var(--gold);
+  color: var(--charcoal);
+}
+
+@media (max-width: 768px) {
+  .delivery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .delivery-card {
+    padding: 24px 12px;
+  }
+
+  .delivery-icon {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
    REVIEW CTA SECTION
    ========================================================================== */
 .review-cta {
