@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Urban Zaika - Review QR Code (Print)</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      width: 350px;
+      border: 3px solid #6B1010;
+      border-radius: 20px;
+      padding: 36px 28px;
+      text-align: center;
+      background: linear-gradient(135deg, #FFF8F0 0%, #fff 100%);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #6B1010;
+      margin-bottom: 4px;
+    }
+
+    .tagline {
+      font-size: 0.75rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .stars {
+      font-size: 1.6rem;
+      color: #D4A843;
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
+
+    .message-ja {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .message-en {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .message-ur {
+      font-size: 0.85rem;
+      color: #666;
+      direction: rtl;
+      font-family: 'Noto Nastaliq Urdu', serif;
+      margin-bottom: 20px;
+    }
+
+    .qr-container {
+      display: inline-block;
+      padding: 12px;
+      background: #fff;
+      border-radius: 12px;
+      border: 2px solid #eee;
+      margin-bottom: 16px;
+    }
+
+    .qr-container img {
+      display: block;
+      width: 180px;
+      height: 180px;
+    }
+
+    .scan-text {
+      font-size: 0.75rem;
+      color: #999;
+      margin-bottom: 16px;
+    }
+
+    .halal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f7f0;
+      color: #2d6a2d;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: #D4A843;
+      margin: 16px auto;
+    }
+
+    .thank-you {
+      font-size: 0.8rem;
+      color: #6B1010;
+      font-weight: 500;
+    }
+
+    @media print {
+      body { padding: 0; }
+      .card { border: 2px solid #6B1010; box-shadow: none; }
+
+      /* Print 4 cards per A4 page */
+      .print-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">&#9775; Urban Zaika</div>
+    <div class="tagline">Authentic Halal Indian & Pakistani Cuisine</div>
+
+    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+
+    <p class="message-ja">Google口コミをお願いします!</p>
+    <p class="message-en">Please leave us a Google Review!</p>
+    <p class="message-ur">براہ کرم گوگل ریویو دیں!</p>
+
+    <div class="qr-container">
+      <!-- QR code via Google Charts API - points to urban-zaika.com/review -->
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Furban-zaika.com%2Freview%2F&color=6B1010" alt="Scan to leave a Google Review for Urban Zaika">
+    </div>
+
+    <p class="scan-text">Scan with your phone camera<br>スマホのカメラでスキャン</p>
+
+    <div class="divider"></div>
+
+    <p class="thank-you">ありがとうございます Thank you! شکریہ</p>
+
+    <div style="margin-top: 12px;">
+      <span class="halal-badge">&#9774; 100% Halal Certified</span>
+    </div>
+  </div>
+</body>
+</html>

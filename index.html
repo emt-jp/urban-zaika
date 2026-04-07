@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XFYZQ5NKZN"></script>
+  <meta charset="UTF-8">
+
+  <!-- Google tag (gtag.js) - deferred -->
+  <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-XFYZQ5NKZN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XFYZQ5NKZN');
   </script>
-
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Urban Zaika｜ハラルインド・パキスタン料理｜東京都江戸川区</title>
   <meta name="description" content="東京都江戸川区上一色のハラル認証レストラン Urban Zaika。本格的なインド・パキスタン料理をご提供。ビリヤニ、バターチキン、カラヒなど豊富なメニュー。ランチ・ディナー毎日営業。Authentic halal Indian & Pakistani cuisine in Edogawa, Tokyo.">
@@ -21,10 +21,23 @@
   <link rel="alternate" hreflang="ja" href="https://urban-zaika.com/">
   <link rel="alternate" hreflang="ur" href="https://urban-zaika.com/">
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://urban-zaika.com/">
+
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="JP-13">
+  <meta name="geo.placename" content="Edogawa, Tokyo">
+  <meta name="geo.position" content="35.7229072;139.8737767">
+  <meta name="ICBM" content="35.7229072, 139.8737767">
+
   <!-- Open Graph -->
   <meta property="og:title" content="Urban Zaika｜ハラルインド・パキスタン料理｜東京都江戸川区">
   <meta property="og:description" content="東京都江戸川区の本格ハラル認証インド・パキスタン料理レストラン。ビリヤニ、バターチキン、カラヒなど。毎日11時〜22時営業。">
   <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://urban-zaika.com/">
+  <meta property="og:image" content="https://urban-zaika.com/images/butter-chicken.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="600">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Urban Zaika">
@@ -63,17 +76,23 @@
         "closes": "22:00"
       }
     ],
-    "image": "images/butter-chicken.jpg",
+    "image": "https://urban-zaika.com/images/butter-chicken.webp",
     "menu": "#menu",
     "acceptsReservations": "True"
   }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </noscript>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -180,6 +199,48 @@
           <h3 class="feature-title"><span data-en="Family Recipes" data-ja="家族のレシピ" data-ur="خاندانی نسخے">家族のレシピ</span></h3>
           <p class="feature-desc"><span data-en="Dishes lovingly prepared from recipes passed down through generations of master cooks." data-ja="熟練の料理人から代々受け継がれたレシピで、愛情を込めて調理しています。" data-ur="ماہر باورچیوں کی نسلوں سے چلے آنے والے نسخوں سے محبت سے تیار کیے گئے پکوان۔">熟練の料理人から代々受け継がれたレシピで、愛情を込めて調理しています。</span></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lunch Promotion Banner -->
+  <section class="lunch-promo" id="lunch">
+    <div class="container">
+      <div class="lunch-promo-inner fade-in">
+        <div class="lunch-promo-badge">
+          <span data-en="LUNCH TIME" data-ja="ランチタイム" data-ur="لنچ ٹائم">ランチタイム</span>
+        </div>
+        <h2 class="lunch-promo-title">
+          <span data-en="Lunch Sets from &yen;650" data-ja="ランチセット &yen;650から" data-ur="لنچ سیٹ ¥650 سے">ランチセット &yen;650から</span>
+        </h2>
+        <p class="lunch-promo-subtitle">
+          <span data-en="11:00 - 14:00 | Curry + Naan or Rice + Drink" data-ja="11:00 - 14:00 ｜ カレー + ナンまたはライス + ドリンク" data-ur="11:00 - 14:00 | کری + نان یا چاول + مشروب">11:00 - 14:00 ｜ カレー + ナンまたはライス + ドリンク</span>
+        </p>
+        <div class="lunch-promo-sets">
+          <div class="lunch-set-card">
+            <span class="lunch-set-label">A</span>
+            <span class="lunch-set-name"><span data-en="Chicken Curry Set" data-ja="チキンカレーセット" data-ur="چکن کری سیٹ">チキンカレーセット</span></span>
+            <span class="lunch-set-price">&yen;650</span>
+          </div>
+          <div class="lunch-set-card">
+            <span class="lunch-set-label">B</span>
+            <span class="lunch-set-name"><span data-en="Butter Chicken Set" data-ja="バターチキンセット" data-ur="بٹر چکن سیٹ">バターチキンセット</span></span>
+            <span class="lunch-set-price">&yen;800</span>
+          </div>
+          <div class="lunch-set-card">
+            <span class="lunch-set-label">C</span>
+            <span class="lunch-set-name"><span data-en="Biryani Set" data-ja="ビリヤニセット" data-ur="بریانی سیٹ">ビリヤニセット</span></span>
+            <span class="lunch-set-price">&yen;900</span>
+          </div>
+          <div class="lunch-set-card">
+            <span class="lunch-set-label">D</span>
+            <span class="lunch-set-name"><span data-en="Mutton Curry Set" data-ja="マトンカレーセット" data-ur="مٹن کری سیٹ">マトンカレーセット</span></span>
+            <span class="lunch-set-price">&yen;950</span>
+          </div>
+        </div>
+        <p class="lunch-promo-note">
+          <span data-en="All sets include naan or rice + 1 drink. 100% Halal." data-ja="全セットにナンまたはライス＋ドリンク1杯付き。100%ハラール。" data-ur="تمام سیٹ میں نان یا چاول + 1 مشروب شامل۔ 100% حلال۔">全セットにナンまたはライス＋ドリンク1杯付き。100%ハラール。</span>
+        </p>
       </div>
     </div>
   </section>
@@ -648,7 +709,7 @@
       </div>
 
       <div class="specialties-grid">
-        <div class="specialty-card fade-in" style="background-image: url('images/butter-chicken.jpg');">
+        <div class="specialty-card fade-in" style="background-image: url('images/butter-chicken.webp'), url('images/butter-chicken.jpg');">
           <div class="specialty-card-overlay"></div>
           <div class="specialty-card-content">
             <div class="specialty-badge">&#9733; <span data-en="Signature" data-ja="看板メニュー" data-ur="خاص">看板メニュー</span></div>
@@ -660,7 +721,7 @@
           </div>
         </div>
 
-        <div class="specialty-card fade-in" style="background-image: url('images/curry-bowl.jpg');">
+        <div class="specialty-card fade-in" style="background-image: url('images/curry-bowl.webp'), url('images/curry-bowl.jpg');">
           <div class="specialty-card-overlay"></div>
           <div class="specialty-card-content">
             <div class="specialty-badge">&#128293; <span data-en="Slow-Cooked" data-ja="煮込み" data-ur="آہستہ پکا ہوا">煮込み</span></div>
@@ -672,7 +733,7 @@
           </div>
         </div>
 
-        <div class="specialty-card fade-in" style="background-image: url('images/karahi.jpg');">
+        <div class="specialty-card fade-in" style="background-image: url('images/karahi.webp'), url('images/karahi.jpg');">
           <div class="specialty-card-overlay"></div>
           <div class="specialty-card-content">
             <div class="specialty-badge">&#127798; <span data-en="Wok-Fired" data-ja="鉄鍋焼き" data-ur="کڑاہی میں پکا ہوا">鉄鍋焼き</span></div>
@@ -698,31 +759,31 @@
 
       <div class="gallery-grid">
         <div class="gallery-item gallery-item-large fade-in">
-          <img src="images/butter-chicken.jpg" alt="Butter chicken served in traditional bowl" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/butter-chicken.webp" type="image/webp"><img src="images/butter-chicken.jpg" alt="Butter chicken served in traditional bowl" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Butter Chicken</div>
         </div>
         <div class="gallery-item fade-in">
-          <img src="images/karahi.jpg" alt="Chicken karahi cooked in traditional wok" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/karahi.webp" type="image/webp"><img src="images/karahi.jpg" alt="Chicken karahi cooked in traditional wok" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Chicken Karahi</div>
         </div>
         <div class="gallery-item fade-in">
-          <img src="images/curry-bowl.jpg" alt="Rich curry bowl with aromatic spices" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/curry-bowl.webp" type="image/webp"><img src="images/curry-bowl.jpg" alt="Rich curry bowl with aromatic spices" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Signature Curry</div>
         </div>
         <div class="gallery-item fade-in">
-          <img src="images/chana.jpg" alt="Chana masala with chickpeas and spices" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/chana.webp" type="image/webp"><img src="images/chana.jpg" alt="Chana masala with chickpeas and spices" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Chana Masala</div>
         </div>
         <div class="gallery-item fade-in">
-          <img src="images/aloo-matar.jpg" alt="Aloo matar with potatoes and green peas" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/aloo-matar.webp" type="image/webp"><img src="images/aloo-matar.jpg" alt="Aloo matar with potatoes and green peas" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Aloo Matar</div>
         </div>
         <div class="gallery-item gallery-item-large fade-in">
-          <img src="images/chicken-curry-promo.jpg" alt="Chicken curry special promotion" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/chicken-curry-promo.webp" type="image/webp"><img src="images/chicken-curry-promo.jpg" alt="Chicken curry special promotion" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Chef's Special</div>
         </div>
         <div class="gallery-item fade-in">
-          <img src="images/fries.jpg" alt="Crispy golden fries served fresh" loading="lazy" width="800" height="600">
+          <picture><source srcset="images/fries.webp" type="image/webp"><img src="images/fries.jpg" alt="Crispy golden fries served fresh" loading="lazy" width="800" height="600"></picture>
           <div class="gallery-caption">Crispy Fries</div>
         </div>
       </div>
@@ -780,6 +841,25 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review CTA Section -->
+  <section class="review-cta" id="review-cta">
+    <div class="container">
+      <div class="review-cta-content fade-in">
+        <div class="review-cta-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <h2 class="review-cta-title">
+          <span data-en="Enjoyed Your Meal?" data-ja="お食事はいかがでしたか？" data-ur="کھانا کیسا لگا؟">お食事はいかがでしたか？</span>
+        </h2>
+        <p class="review-cta-text">
+          <span data-en="Your feedback helps other food lovers discover authentic halal cuisine in Edogawa. Share your experience on Google!" data-ja="あなたの口コミが、江戸川区で本格ハラール料理を探している方の助けになります。ぜひGoogleでご感想をお聞かせください！" data-ur="آپ کی رائے ایڈوگاوا میں مستند حلال کھانے کی تلاش میں دوسروں کی مدد کرتی ہے۔ گوگل پر اپنا تجربہ شیئر کریں!">あなたの口コミが、江戸川区で本格ハラール料理を探している方の助けになります。ぜひGoogleでご感想をお聞かせください！</span>
+        </p>
+        <a href="/review/" class="review-cta-button" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: middle; margin-right: 8px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <span data-en="Write a Google Review" data-ja="Google口コミを書く" data-ur="گوگل ریویو لکھیں">Google口コミを書く</span>
+        </a>
       </div>
     </div>
   </section>
@@ -903,7 +983,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Urban Zaika. All rights reserved.</p>
+        <p>&copy; 2025-2026 Urban Zaika. All rights reserved.</p>
         <p class="footer-japanese">&#26481;&#20140;&#12398;&#26412;&#26684;&#12495;&#12521;&#12540;&#12523;&#26009;&#29702;</p>
       </div>
     </div>

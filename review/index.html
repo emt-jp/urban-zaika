@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Urban Zaika - Leave a Google Review</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="refresh" content="3;url=https://search.google.com/local/writereview?placeid=ChIJ4WDSNzWHGGARz9DhXIHr5zI">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #1A1A1A 0%, #6B1010 50%, #2D2D2D 100%);
+      color: #FFF8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 24px;
+    }
+    .container {
+      max-width: 480px;
+    }
+    .logo {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #D4A843;
+      margin-bottom: 8px;
+    }
+    .logo-icon {
+      font-size: 2rem;
+    }
+    .tagline {
+      font-size: 0.9rem;
+      color: rgba(255, 248, 240, 0.7);
+      margin-bottom: 40px;
+    }
+    .message {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #FFF8F0;
+    }
+    .spinner {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border: 3px solid rgba(212, 168, 67, 0.3);
+      border-top-color: #D4A843;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 24px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .fallback {
+      font-size: 0.9rem;
+      color: rgba(255, 248, 240, 0.6);
+    }
+    .fallback a {
+      color: #D4A843;
+      text-decoration: underline;
+    }
+    .fallback a:hover {
+      color: #E8C96A;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <span class="logo-icon">&#9775;</span> Urban Zaika
+    </div>
+    <p class="tagline">Authentic Halal Indian & Pakistani Cuisine in Tokyo</p>
+    <div class="spinner"></div>
+    <p class="message">Redirecting to Google Reviews...</p>
+    <p class="fallback">
+      If you are not redirected automatically,<br>
+      <a href="https://search.google.com/local/writereview?placeid=ChIJ4WDSNzWHGGARz9DhXIHr5zI">click here to leave a review</a>.
+    </p>
+  </div>
+  <script>
+    setTimeout(function() {
+      window.location.href = 'https://search.google.com/local/writereview?placeid=ChIJ4WDSNzWHGGARz9DhXIHr5zI';
+    }, 2000);
+  </script>
+</body>
+</html>

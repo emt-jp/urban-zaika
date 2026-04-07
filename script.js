@@ -3,6 +3,93 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // ---------- Language Dropdown ----------
+  const langDropdown = document.getElementById('langDropdown');
+  const langDropdownBtn = document.getElementById('langDropdownBtn');
+  const langMenu = document.getElementById('langMenu');
+  const langCurrent = document.getElementById('langCurrent');
+  const langOptions = langMenu ? langMenu.querySelectorAll('.lang-option') : [];
+
+  const langLabels = { en: 'English', ja: '日本語', ur: 'اردو' };
+
+  // Get saved language or default to Japanese
+  let currentLang = localStorage.getItem('uz-lang') || 'ja';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('uz-lang', lang);
+    document.documentElement.lang = lang;
+
+    // Set text direction for Urdu (RTL)
+    if (lang === 'ur') {
+      document.documentElement.dir = 'rtl';
+    } else {
+      document.documentElement.dir = 'ltr';
+    }
+
+    // Update all translatable elements
+    document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text !== null) {
+        if (text.includes('\n')) {
+          el.innerHTML = text.replace(/\n/g, '<br>');
+        } else {
+          el.textContent = text;
+        }
+      }
+    });
+
+    // Update dropdown button label
+    if (langCurrent) {
+      langCurrent.textContent = langLabels[lang] || lang;
+    }
+
+    // Update active option
+    langOptions.forEach(opt => {
+      opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+    });
+
+    // Close dropdown
+    if (langDropdown) {
+      langDropdown.classList.remove('open');
+      langDropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  // Set language on page load
+  setLanguage(currentLang);
+
+  // Toggle dropdown open/close
+  if (langDropdownBtn) {
+    langDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = langDropdown.classList.toggle('open');
+      langDropdownBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  // Option clicks
+  langOptions.forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const lang = opt.getAttribute('data-lang');
+      if (lang !== currentLang) {
+        setLanguage(lang);
+      } else {
+        langDropdown.classList.remove('open');
+        langDropdownBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (langDropdown && !langDropdown.contains(e.target)) {
+      langDropdown.classList.remove('open');
+      langDropdownBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
   // ---------- Navbar Scroll Effect ----------
   const navbar = document.getElementById('navbar');
 
@@ -40,7 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     if (navMenu.classList.contains('active') &&
         !navMenu.contains(e.target) &&
-        !navToggle.contains(e.target)) {
+        !navToggle.contains(e.target) &&
+        !langDropdown.contains(e.target)) {
       navToggle.classList.remove('active');
       navMenu.classList.remove('active');
       document.body.style.overflow = '';

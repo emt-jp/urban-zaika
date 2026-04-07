@@ -17,6 +17,7 @@
   --green: #2D5A27;
   --green-light: #3A7A32;
   --whatsapp-green: #25D366;
+  --line-green: #06C755;
   --white: #FFFFFF;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
@@ -48,6 +49,128 @@ body {
   background: var(--cream);
   line-height: 1.7;
   overflow-x: hidden;
+}
+
+/* ---------- RTL / Urdu Support ---------- */
+html[dir="rtl"] {
+  font-family: 'Noto Nastaliq Urdu', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: 'Noto Nastaliq Urdu', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 2.2;
+}
+
+html[dir="rtl"] .nav-container {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-menu {
+  right: auto;
+  left: -100%;
+}
+
+html[dir="rtl"] .nav-menu.active {
+  left: 0;
+  right: auto;
+}
+
+html[dir="rtl"] .nav-link {
+  text-align: right;
+}
+
+html[dir="rtl"] .hero-buttons {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .mobile-cta-bar {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .cta-btn {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .specialty-card-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-brand {
+  text-align: right;
+}
+
+html[dir="rtl"] .testimonial-quote {
+  text-align: right;
+}
+
+html[dir="rtl"] .menu-item {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .item-price {
+  text-align: left;
+}
+
+html[dir="rtl"] .item-name {
+  text-align: right;
+}
+
+html[dir="rtl"] .info-block {
+  text-align: right;
+}
+
+html[dir="rtl"] .feature-card {
+  text-align: right;
+}
+
+html[dir="rtl"] .about-text {
+  text-align: right;
+}
+
+html[dir="rtl"] .footer-links ul {
+  text-align: right;
+}
+
+html[dir="rtl"] .floating-buttons {
+  left: 20px;
+  right: auto;
+}
+
+html[dir="rtl"] .back-to-top {
+  left: 20px;
+  right: auto;
+}
+
+html[dir="rtl"] .testimonial-author {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .author-info {
+  text-align: right;
+}
+
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .section-subtitle,
+html[dir="rtl"] .section-desc {
+  text-align: center;
+}
+
+html[dir="rtl"] .hours-table {
+  direction: rtl;
+}
+
+html[dir="rtl"] .lang-dropdown {
+  margin-left: 16px;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .lang-menu {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .lang-current {
+  font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif;
 }
 
 a {
@@ -349,6 +472,121 @@ textarea:focus-visible {
 .nav-toggle.active .hamburger::after {
   top: 0;
   transform: rotate(-45deg);
+}
+
+/* ---------- Language Dropdown ---------- */
+.lang-dropdown {
+  position: relative;
+  margin-left: auto;
+  margin-right: 16px;
+  z-index: 1010;
+}
+
+.lang-dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(212, 168, 67, 0.3);
+  border-radius: 50px;
+  padding: 6px 14px;
+  color: var(--cream);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.lang-dropdown-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--gold);
+}
+
+.lang-globe-icon {
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.lang-chevron {
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.lang-dropdown.open .lang-chevron {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: rgba(26, 26, 26, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 168, 67, 0.25);
+  border-radius: var(--radius-md);
+  padding: 6px;
+  list-style: none;
+  min-width: 150px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.25s ease;
+}
+
+.lang-dropdown.open .lang-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  color: rgba(255, 248, 240, 0.7);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.lang-option:hover {
+  background: rgba(212, 168, 67, 0.15);
+  color: var(--cream);
+}
+
+.lang-option.active {
+  background: rgba(212, 168, 67, 0.2);
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.lang-option[data-lang="ur"] {
+  font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif;
+}
+
+.lang-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
 }
 
 /* ==========================================================================
@@ -1221,6 +1459,10 @@ textarea:focus-visible {
   color: var(--gold);
 }
 
+.footer-heading-review {
+  margin-top: 20px;
+}
+
 .social-links {
   display: flex;
   flex-direction: column;
@@ -1255,22 +1497,216 @@ textarea:focus-visible {
 }
 
 /* ==========================================================================
-   FLOATING WHATSAPP BUTTON
+   LUNCH PROMOTION BANNER
    ========================================================================== */
-.whatsapp-float {
+.lunch-promo {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #6B1010 0%, #8B1A1A 50%, #6B1010 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.lunch-promo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(212, 168, 67, 0.1) 0%, transparent 70%);
+}
+
+.lunch-promo-inner {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.lunch-promo-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--burgundy-dark);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 24px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+
+.lunch-promo-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+
+.lunch-promo-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 248, 240, 0.8);
+  margin-bottom: 32px;
+}
+
+.lunch-promo-sets {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto 24px;
+}
+
+.lunch-set-card {
+  background: rgba(255, 248, 240, 0.1);
+  border: 1px solid rgba(212, 168, 67, 0.3);
+  border-radius: 12px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition);
+}
+
+.lunch-set-card:hover {
+  background: rgba(255, 248, 240, 0.15);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.lunch-set-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--gold);
+  color: var(--burgundy-dark);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 50%;
+}
+
+.lunch-set-name {
+  font-size: 0.9rem;
+  color: var(--cream);
+  font-weight: 500;
+  text-align: center;
+}
+
+.lunch-set-price {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.lunch-promo-note {
+  font-size: 0.85rem;
+  color: rgba(255, 248, 240, 0.6);
+}
+
+@media (max-width: 768px) {
+  .lunch-promo-sets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lunch-promo-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lunch-promo-sets {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+/* ==========================================================================
+   REVIEW CTA SECTION
+   ========================================================================== */
+.review-cta {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--cream) 0%, #fff 50%, var(--cream) 100%);
+  text-align: center;
+}
+
+.review-cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.review-cta-stars {
+  font-size: 2.5rem;
+  color: var(--gold);
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+}
+
+.review-cta-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--burgundy);
+  margin-bottom: 16px;
+}
+
+.review-cta-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.review-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--burgundy);
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-md);
+}
+
+.review-cta-button:hover {
+  background: var(--burgundy-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   FLOATING BUTTONS (LINE + WHATSAPP)
+   ========================================================================== */
+.floating-buttons {
   position: fixed;
   bottom: 100px;
   right: 24px;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.line-float,
+.whatsapp-float {
   width: 60px;
   height: 60px;
-  background: var(--whatsapp-green);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   transition: all var(--transition);
+  position: relative;
+}
+
+.whatsapp-float {
+  background: var(--whatsapp-green);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 }
 
 .whatsapp-float:hover {
@@ -1279,17 +1715,36 @@ textarea:focus-visible {
   box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
 }
 
-.whatsapp-float::after {
+.line-float {
+  background: var(--line-green);
+  box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
+}
+
+.line-float:hover {
+  background: #05b34c;
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(6, 199, 85, 0.5);
+}
+
+.whatsapp-float::after,
+.line-float::after {
   content: '';
   position: absolute;
   inset: -4px;
   border-radius: 50%;
-  border: 2px solid var(--whatsapp-green);
-  animation: whatsappPulse 2s ease-out infinite;
+  animation: floatPulse 2s ease-out infinite;
   opacity: 0;
 }
 
-@keyframes whatsappPulse {
+.whatsapp-float::after {
+  border: 2px solid var(--whatsapp-green);
+}
+
+.line-float::after {
+  border: 2px solid var(--line-green);
+}
+
+@keyframes floatPulse {
   0% {
     transform: scale(1);
     opacity: 0.6;
@@ -1563,25 +2018,59 @@ textarea:focus-visible {
   }
 
   /* Adjust floating buttons position for mobile CTA */
-  .whatsapp-float {
+  .floating-buttons {
     bottom: 90px;
-  }
-
-  .back-to-top {
-    bottom: 90px;
-    right: 24px;
-  }
-
-  .whatsapp-float {
     right: 16px;
+    gap: 10px;
+  }
+
+  .line-float,
+  .whatsapp-float {
     width: 54px;
     height: 54px;
   }
 
   .back-to-top {
+    bottom: 90px;
     right: 16px;
     width: 44px;
     height: 44px;
+  }
+
+  .cta-line {
+    background: var(--line-green);
+    color: var(--white);
+  }
+
+  .cta-line:hover {
+    background: #05b34c;
+  }
+
+  /* Language dropdown on mobile */
+  .lang-dropdown {
+    margin-right: 12px;
+    margin-left: auto;
+  }
+
+  .lang-dropdown-btn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    gap: 4px;
+  }
+
+  .lang-globe-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .lang-menu {
+    right: 0;
+    min-width: 140px;
+  }
+
+  .lang-option {
+    padding: 9px 12px;
+    font-size: 0.82rem;
   }
 
   /* Add bottom padding to body so footer content isn't hidden behind CTA */
@@ -1625,13 +2114,16 @@ textarea:focus-visible {
    ========================================================================== */
 @media print {
   .navbar,
+  .floating-buttons,
   .whatsapp-float,
+  .line-float,
   .back-to-top,
   .mobile-cta-bar,
   .hero-pattern,
   .hero-overlay,
   .footer-pattern,
-  .menu-filters {
+  .menu-filters,
+  .lang-dropdown {
     display: none !important;
   }
 
