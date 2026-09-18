@@ -12,3 +12,4 @@ firebase-debug.log
 .firebase/
 .venv-tools/
 review-cards-*.pdf
+order-flyer-*.pdf
