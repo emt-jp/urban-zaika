@@ -35,7 +35,8 @@ LINE_GREEN = HexColor('#06C755')
 
 CARD_W, CARD_H = 105 * mm, 148.5 * mm   # A5, four to an A4 sheet
 
-LINE_URL = 'https://line.me/R/ti/p/@urbanzaika'
+# TODO: swap to the LINE Official Account deep link once @urbanzaika exists (it 404s today)
+LINE_URL = 'https://wa.me/819066582838?text=%E3%81%94%E6%B3%A8%E6%96%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99'
 WHATSAPP = '+81 90-6658-2838'
 
 BRANCHES = [
@@ -55,12 +56,12 @@ BRANCHES = [
 
 VARIANTS = {
     'discount': {
-        'headline_ja': '次回はお電話・LINEで',
+        'headline_ja': '次回はお電話・WhatsAppで',
         'offer_ja': '直接ご注文で 10%OFF',
         'offer_en': '10% off when you order direct',
     },
     'freeship': {
-        'headline_ja': '次回はお電話・LINEで',
+        'headline_ja': '次回はお電話・WhatsAppで',
         'offer_ja': '¥2,000以上で 配達無料',
         'offer_en': 'Free delivery over ¥2,000',
     },
@@ -111,7 +112,7 @@ def draw_flyer(c, x, y, branch, variant, qr):
     c.drawImage(qr, x + (CARD_W - qr_size) / 2, y + 42 * mm, qr_size, qr_size, mask='auto')
     c.setFillColor(LINE_GREEN)
     c.setFont('Helvetica-Bold', 9)
-    c.drawCentredString(x + CARD_W / 2, y + 36 * mm, 'LINE @urbanzaika')
+    c.drawCentredString(x + CARD_W / 2, y + 36 * mm, 'WhatsApp で注文')
 
     # phone, big — the whole point of the flyer
     c.setFillColor(CHARCOAL)
