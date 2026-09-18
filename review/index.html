@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Review Urban Zaika - Leave a Google Review</title>
   <meta name="robots" content="noindex, nofollow">
-  <meta http-equiv="refresh" content="3;url=https://search.google.com/local/writereview?placeid=ChIJ4WDSNzWHGGARz9DhXIHr5zI">
+  <!-- Google Analytics -->
+  <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-XFYZQ5NKZN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XFYZQ5NKZN');
+  </script>
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -66,6 +74,15 @@
     .fallback a:hover {
       color: #E8C96A;
     }
+    .branches { display: flex; flex-direction: column; gap: 14px; margin: 28px 0 8px; }
+    .branch-btn {
+      display: block; text-decoration: none; padding: 16px 20px; border-radius: 14px;
+      background: #D4A843; color: #1A1A1A; font-weight: 600; font-size: 1.05rem;
+      transition: 0.2s ease;
+    }
+    .branch-btn:hover { background: #E8C96A; }
+    .branch-btn small { display: block; font-weight: 400; font-size: 0.8rem; opacity: 0.75; margin-top: 4px; }
+    .stars { font-size: 1.6rem; letter-spacing: 4px; color: #D4A843; margin-bottom: 4px; }
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,17 +94,44 @@
       <span class="logo-icon">&#9775;</span> Urban Zaika
     </div>
     <p class="tagline">Authentic Halal Indian & Pakistani Cuisine in Tokyo</p>
-    <div class="spinner"></div>
-    <p class="message">Redirecting to Google Reviews...</p>
+    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+    <p class="message" id="msg">Which branch did you visit?<br><span style="font-size:0.85rem;opacity:0.7">どちらの店舗をご利用されましたか？</span></p>
+    <div class="branches" id="branches">
+      <a class="branch-btn" id="btn-edogawa" href="https://g.page/r/Cc_Q4VyB6-cyEBM/review" rel="noopener">
+        上一色店 / Kamiisshiki
+        <small>江戸川区上一色1-8-21</small>
+      </a>
+      <a class="branch-btn" id="btn-kita-ku" href="https://g.page/r/CVF5aEwTWcDQEBM/review" rel="noopener">
+        十条店 / Jujo
+        <small>北区上十条5-14-6</small>
+      </a>
+    </div>
     <p class="fallback">
-      If you are not redirected automatically,<br>
-      <a href="https://search.google.com/local/writereview?placeid=ChIJ4WDSNzWHGGARz9DhXIHr5zI">click here to leave a review</a>.
+      Thank you for supporting Urban Zaika.<br>
+      &#12372;&#21332;&#21147;&#12354;&#12426;&#12364;&#12392;&#12358;&#12372;&#12374;&#12356;&#12414;&#12377;&#12290;
     </p>
   </div>
   <script>
-    setTimeout(function() {
-      window.location.href = 'https://search.google.com/local/writereview?placeid=ChIJ4WDSNzWHGGARz9DhXIHr5zI';
-    }, 2000);
+    var LINKS = {
+      'edogawa': 'https://g.page/r/Cc_Q4VyB6-cyEBM/review',
+      'kamiisshiki': 'https://g.page/r/Cc_Q4VyB6-cyEBM/review',
+      'kita-ku': 'https://g.page/r/CVF5aEwTWcDQEBM/review',
+      'jujo': 'https://g.page/r/CVF5aEwTWcDQEBM/review'
+    };
+    ['edogawa', 'kita-ku'].forEach(function (b) {
+      var el = document.getElementById('btn-' + b);
+      if (el) el.addEventListener('click', function () {
+        gtag('event', 'review_click', { branch: b });
+      });
+    });
+    // /review/?b=kita-ku skips the chooser — used by printed cards and LINE messages
+    var b = (new URLSearchParams(location.search).get('b') || '').toLowerCase();
+    if (LINKS[b]) {
+      gtag('event', 'review_redirect', { branch: b });
+      document.getElementById('msg').innerHTML = 'Opening Google Reviews…';
+      document.getElementById('branches').style.display = 'none';
+      setTimeout(function () { window.location.href = LINKS[b]; }, 600);
+    }
   </script>
 </body>
 </html>

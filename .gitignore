@@ -10,3 +10,5 @@ MARKETING-DETAILED-STEPS.md
 **/.DS_Store
 firebase-debug.log
 .firebase/
+.venv-tools/
+review-cards-*.pdf
