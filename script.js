@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const langLabels = { en: 'English', ja: '日本語', ur: 'اردو' };
 
   // Get saved language or default to Japanese
-  let currentLang = localStorage.getItem('uz-lang') || 'ja';
+  // ?lang=en|ja|ur wins over the stored preference so ads can land in the right language
+  const langParam = new URLSearchParams(window.location.search).get('lang');
+  const validLangs = ['en', 'ja', 'ur'];
+  let currentLang = (validLangs.includes(langParam) ? langParam : null)
+    || localStorage.getItem('uz-lang') || 'ja';
 
   function setLanguage(lang) {
     currentLang = lang;

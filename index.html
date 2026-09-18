@@ -903,18 +903,18 @@
         <p class="section-desc" style="margin-top:8px"><a href="/delivery/" style="color:var(--gold);font-weight:600;border-bottom:1px solid var(--gold)"><span data-en="View Full Delivery Menu &rarr;" data-ja="デリバリーメニュー全体を見る &rarr;" data-ur="مکمل ڈیلیوری مینو دیکھیں &rarr;">デリバリーメニュー全体を見る &rarr;</span></a></p>
       </div>
       <div class="delivery-grid fade-in">
-        <div class="delivery-card delivery-card-disabled" data-platform="ubereats" aria-disabled="true">
+        <a href="https://www.ubereats.com/jp-en/store/urban-zaika/7nI_6BfbXSCbGXHMspiI7A" class="delivery-card delivery-card-active" target="_blank" rel="noopener" onclick="gtag('event','click_delivery',{platform:'ubereats'})">
           <div class="delivery-icon">&#127861;</div>
           <h3 class="delivery-name">Uber Eats</h3>
           <p class="delivery-desc"><span data-en="Order via Uber Eats" data-ja="Uber Eatsで注文" data-ur="اوبر ایٹس سے آرڈر کریں">Uber Eatsで注文</span></p>
-          <span class="delivery-badge"><span data-en="Coming Soon" data-ja="近日公開" data-ur="جلد آ رہا ہے">近日公開</span></span>
-        </div>
-        <div class="delivery-card delivery-card-disabled" data-platform="demaecan" aria-disabled="true">
+          <span class="delivery-badge delivery-badge-active"><span data-en="Order Now" data-ja="今すぐ注文" data-ur="ابھی آرڈر کریں">今すぐ注文</span></span>
+        </a>
+        <a href="https://demae-can.com/shop/menu/3470881" class="delivery-card delivery-card-active" target="_blank" rel="noopener" onclick="gtag('event','click_delivery',{platform:'demaecan'})">
           <div class="delivery-icon">&#128666;</div>
           <h3 class="delivery-name"><span data-en="Demaecan" data-ja="出前館" data-ur="دیمائیکان">出前館</span></h3>
           <p class="delivery-desc"><span data-en="Order via Demaecan" data-ja="出前館で注文" data-ur="دیمائیکان سے آرڈر کریں">出前館で注文</span></p>
-          <span class="delivery-badge"><span data-en="Coming Soon" data-ja="近日公開" data-ur="جلد آ رہا ہے">近日公開</span></span>
-        </div>
+          <span class="delivery-badge delivery-badge-active"><span data-en="Order Now" data-ja="今すぐ注文" data-ur="ابھی آرڈر کریں">今すぐ注文</span></span>
+        </a>
         <a href="https://wa.me/819066582838?text=Hi%2C%20I%27d%20like%20to%20place%20a%20delivery%20order" class="delivery-card delivery-card-active" target="_blank" rel="noopener" onclick="gtag('event','click_delivery',{platform:'whatsapp'})">
           <div class="delivery-icon">&#128242;</div>
           <h3 class="delivery-name">WhatsApp</h3>
@@ -980,8 +980,9 @@
           </div>
 
           <div class="info-block">
-            <h3 class="info-title">&#127968; <span data-en="Our other branch" data-ja="もう一つの店舗" data-ur="ہماری دوسری برانچ">もう一つの店舗</span></h3>
+            <h3 class="info-title">&#127968; <span data-en="Branches" data-ja="もう一つの店舗" data-ur="ہماری دوسری برانچ">もう一つの店舗</span></h3>
             <p class="info-text">
+              <a href="/edogawa/" class="info-link" onclick="gtag('event','click_cta',{cta:'branch_page',branch:'edogawa'})"><span data-en="Kamiisshiki branch (this location)" data-ja="上一色店（当店）" data-ur="کامی اِشیکی برانچ">上一色店（当店）</span></a><br>
               <a href="/kita-ku/" class="info-link" onclick="gtag('event','click_cta',{cta:'other_branch',branch:'kamiisshiki'})"><span data-en="Jujo branch, Kita-ku" data-ja="十条店（北区）" data-ur="جوجو برانچ، کیتا-کو">十条店（北区）</span></a><br>
               <span data-en="5-14-6 Kamijujo, Kita-ku — open daily 11:00-15:00 / 17:00-23:30" data-ja="北区上十条5-14-6｜毎日 11:00-15:00 / 17:00-23:30" data-ur="5-14-6 کامی جوجو، کیتا-کو — روزانہ کھلا">北区上十条5-14-6｜毎日 11:00-15:00 / 17:00-23:30</span>
             </p>
