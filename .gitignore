@@ -1,2 +1,12 @@
-.firebase
+# Internal business data and working notes — never publish (repo is public)
+ads/*audit*.md
+june-2026/
+improvement-plan.html
+MARKETING-DETAILED-STEPS.md
+
+# Local config and OS cruft
+.firebaserc
+.DS_Store
+**/.DS_Store
 firebase-debug.log
+.firebase/

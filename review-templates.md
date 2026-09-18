@@ -73,12 +73,12 @@ Thank you for taking the time to share your feedback. We appreciate your honest 
 
 ### 2-Star Review
 ```
-We're sorry your experience didn't fully meet your expectations. Your feedback is very important to us and we'd like to make things right. Please reach out to us directly at info@urban-zaika.com or 03-6808-8378 so we can understand what happened and improve. We hope to have another chance to serve you better.
+We're sorry your experience didn't fully meet your expectations. Your feedback is very important to us and we'd like to make things right. Please reach out to us directly at info@urban-zaika.com or 03-5879-4679 so we can understand what happened and improve. We hope to have another chance to serve you better.
 ```
 
 ### 1-Star Review
 ```
-We sincerely apologize for the disappointing experience. This is not the standard we hold ourselves to. Please contact us at info@urban-zaika.com or 03-6808-8378 — we'd like to understand what went wrong and make it right. Your feedback helps us improve, and we truly hope to welcome you back for a much better experience.
+We sincerely apologize for the disappointing experience. This is not the standard we hold ourselves to. Please contact us at info@urban-zaika.com or 03-5879-4679 — we'd like to understand what went wrong and make it right. Your feedback helps us improve, and we truly hope to welcome you back for a much better experience.
 ```
 
 ### Response to compliment about halal quality

@@ -1,12 +1,20 @@
 {
   "hosting": {
+    "site": "urban-zaika",
     "public": ".",
     "ignore": [
       "firebase.json",
       "firebase-debug.log",
       ".firebase",
+      ".firebaserc",
       ".git",
-      "**/.git/**"
+      "**/.git/**",
+      "**/.DS_Store",
+      "**/*.md",
+      "ads/**",
+      "june-2026/**",
+      "scripts/**",
+      "improvement-plan.html"
     ],
     "rewrites": [
       {
