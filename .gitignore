@@ -13,3 +13,6 @@ firebase-debug.log
 .venv-tools/
 review-cards-*.pdf
 order-flyer-*.pdf
+
+# generated lead lists — public data, but not for a public repo
+marketing/prospects/
