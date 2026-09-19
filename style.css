@@ -17,7 +17,6 @@
   --green: #2D5A27;
   --green-light: #3A7A32;
   --whatsapp-green: #25D366;
-  --line-green: #06C755;
   --white: #FFFFFF;
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
@@ -1894,7 +1893,7 @@ textarea:focus-visible {
   align-items: center;
 }
 
-.line-float,
+.call-float,
 .whatsapp-float {
   width: 60px;
   height: 60px;
@@ -1917,19 +1916,19 @@ textarea:focus-visible {
   box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
 }
 
-.line-float {
-  background: var(--line-green);
-  box-shadow: 0 4px 20px rgba(6, 199, 85, 0.4);
+.call-float {
+  background: var(--burgundy);
+  box-shadow: 0 4px 20px rgba(139, 26, 26, 0.4);
 }
 
-.line-float:hover {
-  background: #05b34c;
+.call-float:hover {
+  background: var(--burgundy-light);
   transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(6, 199, 85, 0.5);
+  box-shadow: 0 6px 28px rgba(139, 26, 26, 0.5);
 }
 
 .whatsapp-float::after,
-.line-float::after {
+.call-float::after {
   content: '';
   position: absolute;
   inset: -4px;
@@ -1942,8 +1941,8 @@ textarea:focus-visible {
   border: 2px solid var(--whatsapp-green);
 }
 
-.line-float::after {
-  border: 2px solid var(--line-green);
+.call-float::after {
+  border: 2px solid var(--burgundy);
 }
 
 @keyframes floatPulse {
@@ -2226,7 +2225,7 @@ textarea:focus-visible {
     gap: 10px;
   }
 
-  .line-float,
+  .call-float,
   .whatsapp-float {
     width: 54px;
     height: 54px;
@@ -2239,13 +2238,13 @@ textarea:focus-visible {
     height: 44px;
   }
 
-  .cta-line {
-    background: var(--line-green);
+  .cta-whatsapp {
+    background: var(--whatsapp-green);
     color: var(--white);
   }
 
-  .cta-line:hover {
-    background: #05b34c;
+  .cta-whatsapp:hover {
+    background: #1ebe5a;
   }
 
   /* Language dropdown on mobile */
@@ -2318,7 +2317,7 @@ textarea:focus-visible {
   .navbar,
   .floating-buttons,
   .whatsapp-float,
-  .line-float,
+  .call-float,
   .back-to-top,
   .mobile-cta-bar,
   .hero-pattern,
