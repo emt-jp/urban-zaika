@@ -12,7 +12,9 @@ reaching it directly rather than paying to.
 2. **Call JHA about Muslim-Friendly certification** — it exists specifically for halal kitchens
    that serve alcohol, which is us. Section 1.
 3. **Submit to Zabihah and HalalNavi.** Both free, both take an evening. Section 3b.
-4. **Put one catering line on both Google profiles and the website.** Section 4.
+4. ~~Put one catering line on both Google profiles and the website.~~ **Done 19 Sep** — live on
+   the homepage, both branch pages and both Google profiles. Still needs a minimum order size
+   and a lead time from the kitchen. Section 4.
 5. **Settle the name** — SUHANA, URBAN ZAIQA and Urban Zaika are the same restaurant to us and
    three different restaurants to a customer. Section 7.
 

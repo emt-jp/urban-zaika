@@ -38,6 +38,8 @@ are shots 1, 2, 4 and 6 in `social-content-plan.md` and would serve both channel
 |---|---|---|---|
 | 2026-09-19 | 上一色店 | Lunch sets ¥650 | butter-chicken |
 | 2026-09-19 | 十条店 | Tandoor, near Jujo station | karahi |
+| 2026-09-19 | 上一色店 | Party & event catering | chicken-curry-promo |
+| 2026-09-19 | 十条店 | Party & event catering | karahi |
 
 ---
 
