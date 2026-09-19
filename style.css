@@ -1663,6 +1663,82 @@ textarea:focus-visible {
   margin: 0 auto;
 }
 
+/* Catering — party and event orders, taken direct rather than through a platform */
+.catering-box {
+  max-width: 900px;
+  margin: 48px auto 0;
+  padding: 32px 28px;
+  background: var(--charcoal-light);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.catering-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin: 0 0 12px;
+}
+
+.catering-desc {
+  color: var(--cream);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.catering-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.catering-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: var(--gold);
+  color: var(--charcoal);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.catering-btn:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.catering-btn-alt {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+
+.catering-btn-alt:hover {
+  background: rgba(212, 168, 67, 0.12);
+  color: var(--gold-light);
+}
+
+@media (max-width: 600px) {
+  .catering-box {
+    padding: 24px 18px;
+    margin-top: 32px;
+  }
+
+  .catering-title {
+    font-size: 1.25rem;
+  }
+
+  .catering-btn {
+    width: 100%;
+  }
+}
+
 .delivery-card {
   background: var(--charcoal-light);
   border: 1px solid rgba(212, 168, 67, 0.2);
@@ -2279,6 +2355,26 @@ textarea:focus-visible {
   body {
     background: #fff;
     color: #000;
+  }
+
+  .catering-box {
+    background: #fff !important;
+    border-color: #8B1A1A;
+  }
+
+  .catering-title {
+    color: #8B1A1A;
+  }
+
+  .catering-desc {
+    color: #000;
+  }
+
+  /* keep the numbers — they are the point of the block on a printed page */
+  .catering-btn {
+    background: none !important;
+    color: #000 !important;
+    border: 1px solid #8B1A1A;
   }
 
   .menu-section {

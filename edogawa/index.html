@@ -184,6 +184,9 @@
     .map-wrap iframe { width: 100%; height: 340px; border: 0; }
 
     .band { background: var(--white); }
+    .catering-note { max-width: 720px; margin: 36px auto 0; padding: 26px 22px; border: 1px solid var(--gold); border-radius: 10px; text-align: center; }
+    .catering-note h3 { color: var(--burgundy); margin: 0 0 10px; font-size: 1.2rem; }
+    .catering-note p { margin: 0 0 18px; line-height: 1.8; }
     .other-branch {
       background: linear-gradient(135deg, #2D2D2D, #1A1A1A); color: var(--white);
       border-radius: var(--radius-lg); padding: 28px; text-align: center;
@@ -332,6 +335,12 @@
         <a class="btn btn-gold" href="/delivery/" style="background:var(--white); border:2px solid var(--gold)" onclick="gtag('event','click_cta',{cta:'delivery_page',branch:'edogawa'})">
           <span data-en="Delivery &amp; takeout" data-ja="デリバリー・テイクアウト" data-ur="ڈیلیوری اور ٹیک آؤٹ">デリバリー・テイクアウト</span>
         </a>
+      </div>
+
+      <div class="catering-note">
+        <h3><span data-en="Party &amp; event catering" data-ja="ご宴会・ケータリング承ります" data-ur="پارٹی اور تقریبات کے لیے کیٹرنگ">ご宴会・ケータリング承ります</span></h3>
+        <p><span data-en="Weddings, aqiqah, Eid, mosque events and company functions — halal throughout. Call 03-5879-4679 for a quote." data-ja="結婚式、アキーカ、イード、モスクの行事、企業のご会食に対応いたします。すべてハラール対応。お見積りは 03-5879-4679 まで。" data-ur="شادی، عقیقہ، عید، مسجد کی تقریبات اور دفتری تقریبات — مکمل حلال۔ قیمت کے لیے 03-5879-4679 پر کال کریں۔">結婚式、アキーカ、イード、モスクの行事、企業のご会食に対応いたします。すべてハラール対応。お見積りは 03-5879-4679 まで。</span></p>
+        <a class="btn btn-gold" href="tel:03-5879-4679" onclick="gtag('event','click_catering',{branch:'edogawa'})">03-5879-4679</a>
       </div>
     </div>
   </section>
