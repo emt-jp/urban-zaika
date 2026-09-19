@@ -41,6 +41,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  /* the navbar is fixed and 81px tall, so anchor jumps land under it without this */
+  scroll-padding-top: 96px;
 }
 
 body {
