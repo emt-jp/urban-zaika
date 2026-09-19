@@ -24,6 +24,10 @@
       {
         "source": "/delivery",
         "destination": "/delivery/index.html"
+      },
+      {
+        "source": "/catering",
+        "destination": "/catering/index.html"
       }
     ],
     "headers": [
