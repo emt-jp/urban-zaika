@@ -9,8 +9,8 @@ reaching it directly rather than paying to.
 
 1. **Walk into Sonali Halal Food and Madina Masjid in Higashi-Jujo.** The 十条店 sits inside
    Japan's largest Bangladeshi community and nobody there has been told. Section 5.
-2. **Call JHA about Muslim-Friendly certification** — it exists specifically for halal kitchens
-   that serve alcohol, which is us. Section 1.
+2. **Send me the certifying body's name and certificate number.** Both branches are kitchen
+   certified — we just can't name the certifier yet, and every directory asks. Section 1.
 3. **Submit to Zabihah and HalalNavi.** Both free, both take an evening. Section 3b.
 4. ~~Put one catering line on both Google profiles and the website.~~ **Done 19 Sep** — live on
    the homepage, both branch pages and both Google profiles. Still needs a minimum order size
@@ -27,37 +27,29 @@ really halal, and do you serve alcohol?"** Both branches serve alcohol. Every pr
 directory entry currently says nothing about it, and silence loses more customers than an honest
 answer: people assume the worst and pick the restaurant that told them.
 
-Three facts are needed from the owner before this can be published:
+**Confirmed 19 Sep:** both branches hold **kitchen-level halal certification**. That is the
+strongest of the possible positions — it is a claim about the premises, not just the meat supply,
+and it is the one halal directories weight most.
 
-1. **Certification** — an actual certificate from a body (JHA, NAHA, Muslim Professional Japan,
-   or similar), or "halal meat, Muslim-owned, no pork"? Both are sellable. They are sold
-   differently, and claiming the first when only the second is true is the one mistake that
-   cannot be walked back.
-2. **Meat supply** — 100% halal-slaughtered, and from which supplier?
-3. **Alcohol** — served to other guests only, or also used in cooking? Would an alcohol-free
-   lunch service, or an alcohol-free policy during Ramadan, be acceptable?
+Still needed, and it is the last blank:
 
-Then one of the statements below goes on Google, the website, every directory and every flyer —
-**identical wording everywhere**, because people cross-check.
+1. **The certifying body's name and certificate number.** An unnamed certification is treated as
+   no certification by strict diners, and Zabihah, HalalNavi and HalalTrip all have a field for
+   the issuing authority. Until we can name it, the claim is weaker than the certificate we
+   actually hold.
+2. **Alcohol** — served to other guests only, or also used in cooking? Kitchen certification
+   normally rules out cooking with alcohol, but say it explicitly rather than let people assume.
 
-### If formally certified
+Published wording, once the body is named — **identical everywhere**, because people cross-check:
 
-> 当店は〈認証機関名〉のハラール認証を取得しています。肉類はすべてハラール処理されたものを使用し、豚肉は一切取り扱っておりません。アルコールは他のお客様向けにご提供していますが、調理には使用しておりません。
+> 当店は〈認証機関名〉のハラール認証を取得したキッチンです（両店舗）。肉類はすべてハラール処理されたものを使用し、豚肉は一切取り扱っておりません。
 >
-> Certified halal by 〈body〉. All meat is halal-slaughtered and no pork is handled in our
-> kitchen. Alcohol is served to other guests but is never used in our cooking.
+> Certified halal kitchen at both branches, certified by 〈body〉. All meat is halal-slaughtered
+> and no pork is handled in our kitchen.
 
-### If halal meat and Muslim-owned, without a certificate
-
-> ムスリムオーナーの店です。肉類は100%ハラール処理された食肉のみを使用し、豚肉は一切取り扱っておりません。第三者認証機関によるハラール認証は取得しておりません。アルコールは他のお客様向けにご提供していますが、調理には使用しておりません。
->
-> Muslim-owned. We use only 100% halal-slaughtered meat and handle no pork. We do not hold
-> third-party halal certification. Alcohol is served to other guests but is never used in our
-> cooking.
-
-Saying plainly that there is no certificate reads as trustworthy, not as a weakness. Claiming
-certification that does not exist gets you named in the same community groups you are trying to
-win.
+Claiming certification that does not exist gets you named in the same community groups you are
+trying to win — but under-claiming one you *do* hold, which is what the 十条店 page did until
+today, simply gives the credit away.
 
 ### There is a certification built for exactly our situation
 
