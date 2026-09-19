@@ -950,6 +950,19 @@ textarea:focus-visible {
   font-weight: 300;
 }
 
+/* marks the meat-free dishes — the Indian and Nepali diaspora searches for these by name */
+.item-veg {
+  font-size: 0.65rem;
+  line-height: 1;
+  color: #7CB342;
+  border: 1px solid #7CB342;
+  border-radius: 3px;
+  padding: 2px 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
 .item-dots {
   flex: 1;
   border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
