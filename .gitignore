@@ -17,3 +17,8 @@ order-flyer-*.pdf
 # generated lead lists — public data, but not for a public repo
 marketing/prospects/
 marketing/flyers/
+
+# ad account exports carry spend and conversion data
+ads/*.csv
+# except the sanitised targeting lists, which have those columns stripped
+!ads/keywords-targeting-*.csv
