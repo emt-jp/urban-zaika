@@ -934,14 +934,14 @@
         <h3 class="catering-title"><span data-en="Party &amp; Event Catering" data-ja="ご宴会・ケータリング承ります" data-ur="پارٹی اور تقریبات کے لیے کیٹرنگ">ご宴会・ケータリング承ります</span></h3>
         <p class="catering-desc"><span data-en="Weddings, aqiqah, Eid, mosque events, company functions and private parties — halal throughout, prepared at either branch. Call us for a quote." data-ja="結婚式、アキーカ、イード、モスクの行事、企業のご会食、各種パーティーに対応いたします。すべてハラール対応。お見積り・ご相談はお気軽にお電話ください。" data-ur="شادی، عقیقہ، عید، مسجد کی تقریبات، دفتری اور نجی تقریبات — مکمل حلال۔ قیمت معلوم کرنے کے لیے کال کریں۔">結婚式、アキーカ、イード、モスクの行事、企業のご会食、各種パーティーに対応いたします。すべてハラール対応。お見積り・ご相談はお気軽にお電話ください。</span></p>
         <div class="catering-actions">
-          <a href="tel:03-5879-4679" class="catering-btn" onclick="gtag('event','click_catering',{branch:'edogawa'})">
+          <a href="tel:03-5879-4679" class="catering-btn" onclick="uzCatering({branch:'edogawa'})">
             <span data-en="Kamiisshiki" data-ja="上一色店" data-ur="کامی اِشّیکی">上一色店</span> &nbsp;03-5879-4679
           </a>
-          <a href="tel:080-3480-6994" class="catering-btn" onclick="gtag('event','click_catering',{branch:'kita-ku'})">
+          <a href="tel:080-3480-6994" class="catering-btn" onclick="uzCatering({branch:'kita-ku'})">
             <span data-en="Jujo" data-ja="十条店" data-ur="جوجو">十条店</span> &nbsp;080-3480-6994
           </a>
-          <a href="https://wa.me/819066582838?text=%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87" class="catering-btn catering-btn-alt" target="_blank" rel="noopener" onclick="gtag('event','click_catering',{branch:'whatsapp'})">WhatsApp</a>
-          <a href="/catering/" class="catering-btn catering-btn-alt" onclick="gtag('event','click_catering',{branch:'page'})"><span data-en="See catering details" data-ja="ケータリングの詳細" data-ur="کیٹرنگ کی تفصیل">ケータリングの詳細</span></a>
+          <a href="https://wa.me/819066582838?text=%E3%82%B1%E3%83%BC%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87" class="catering-btn catering-btn-alt" target="_blank" rel="noopener" onclick="uzCatering({branch:'whatsapp'})">WhatsApp</a>
+          <a href="/catering/" class="catering-btn catering-btn-alt" onclick="uzCatering({branch:'page'})"><span data-en="See catering details" data-ja="ケータリングの詳細" data-ur="کیٹرنگ کی تفصیل">ケータリングの詳細</span></a>
         </div>
       </div>
     </div>
@@ -1122,5 +1122,16 @@
   </div>
 
   <script src="script.js" defer></script>
+  <script>
+    // Catering clicks fire two events on purpose: click_catering for granular reporting, and
+    // click_cta - already a GA4 key event and imported into Ads - so the click actually counts
+    // as a conversion instead of waiting on a new key event being registered and re-imported.
+    function uzCatering(params) {
+      try {
+        gtag('event', 'click_catering', params);
+        gtag('event', 'click_cta', Object.assign({ cta: 'catering' }, params));
+      } catch (e) {}
+    }
+  </script>
 </body>
 </html>
