@@ -22,3 +22,6 @@ marketing/flyers/
 ads/*.csv
 # except the sanitised targeting lists, which have those columns stripped
 !ads/keywords-targeting-*.csv
+
+# outreach call sheets carry third-party phone numbers - same rule as prospects/
+marketing/catering-callsheet.md
