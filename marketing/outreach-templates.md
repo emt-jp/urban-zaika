@@ -98,8 +98,8 @@ minutes from the Jujo branch.
 >
 > চাইলে কমিটির জন্য বিনামূল্যে কিছু খাবার নিয়ে আসতে পারি, রমজানের পরিকল্পনা শুরুর আগেই আপনারা নিজে দেখে নিতে পারবেন।
 
-*Send the Bengali version only once someone on staff can take a Bengali phone call — do not
-promise a language the phone cannot answer.*
+*Cleared to send, 25 Sep 2026 — Bengali calls can be answered. Lead with this version for Madina
+Masjid and the Higashi-Jujo shops, where the community is Bangladeshi.*
 
 ---
 
@@ -170,7 +170,7 @@ Kioicho, Malaysia in Nanpeidai-cho, Indonesia in Higashi-Gotanda, Nepal in Shimo
 > would be glad to be considered for the Embassy's events or to be added to your list of
 > suppliers. We cook Hyderabadi biryani, karahi, nihari, tandoori grills and a full vegetarian
 > selection, and can serve 30–100 guests from one kitchen and more across both with notice.
-> English and Urdu are spoken by our staff.
+> English, Urdu and Bengali are spoken by our staff.
 >
 > We would be happy to provide a tasting at our own cost at a time that suits you.
 

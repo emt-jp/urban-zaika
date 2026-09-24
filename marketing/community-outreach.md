@@ -119,8 +119,7 @@ monthly. One well-received post outperforms ten deleted ones.
 
 > আসসালামু আলাইকুম! টোকিওতে হালাল ইন্ডিয়ান ও পাকিস্তানি খাবার — Urban Zaika। আমাদের দুটি শাখা: কিতা-কু (জুজো স্টেশনের কাছে) এবং এদোগাওয়া-কু (কামি-ইশশিকি)। বিরিয়ানি, কারাহি, তন্দুরে বানানো গরম নান আর কাবাব। বিয়ে, আকিকা, ঈদ এবং মসজিদের অনুষ্ঠানের জন্য ক্যাটারিং করা হয়। বাংলা ও ইংরেজিতে অর্ডার নেওয়া যায়।
 
-*(Confirm before posting that someone on staff can take a Bengali order — do not promise a
-language the phone cannot answer.)*
+*(Cleared to post, 25 Sep 2026 — Bengali calls can be answered.)*
 
 ### Nepali — Nepali community groups (no halal framing)
 
